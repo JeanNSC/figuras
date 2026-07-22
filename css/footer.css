@@ -1,0 +1,95 @@
+/* ==================== ESTILOS DEL FOOTER ==================== */
+.footer-bg{
+    background-color: #181b29;
+}
+
+/* Ajuste del logo para que no se vea desproporcionado */
+.footer-logo {
+    max-height: 170px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+/* ==================== ENLACES CENTRALES ==================== */
+
+/* Estilo para los links de navegación (Inicio, Catálogo, etc.) */
+.footer-nav a {
+    color: #FF0062; /* Fucsia de la marca */
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #ffffff; /* Pasan a blanco al hacer hover */
+}
+
+/* Estilo para los links legales (Privacidad, Términos) */
+.footer-legal a {
+    color: #FF0062;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: #ffffff;
+}
+
+/* Texto de derechos reservados */
+.copyright-text {
+    font-size: 0.8rem;
+    color: #cccccc !important; /* Un gris muy clarito para que no compita con los links */
+}
+
+/* ==================== REDES SOCIALES ==================== */
+
+.footer-social {
+    display: flex;
+    justify-content: center; /* Obliga a los íconos a quedarse siempre en el medio */
+    gap: 15px; 
+}
+
+/* (Si tenías un bloque @media (min-width: 768px) aquí abajo, ¡bórralo!) */
+
+/* Círculos fucsias de redes sociales */
+.footer-icon {
+    background-color: #FF0062;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover */
+.footer-icon:hover {
+    background-color: #ffffff;
+    color: #FF0062;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(225, 0, 128, 0.5);
+}
+
+/* ==================== FIRMA DEL DESARROLLADOR ==================== */
+
+.navito-link {
+    color: #FF0062;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre tu nombre */
+.navito-link:hover {
+    color: #ffffff; /* Cambia a blanco */
+    text-decoration: underline; /* Subrayado sutil para dejar claro que es un link */
+}

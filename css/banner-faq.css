@@ -1,0 +1,32 @@
+/* ==================== MODIFICADORES PARA EL BANNER "PREGUNTAS" ==================== */
+
+/* 1. Imagen de fondo específica para Preguntas (callejón neón fucsia) */
+.categoria-banner.banner-preguntas {
+    background-image: url('../img/faq/banner-faq.jpg'); /* Ajusta tu ruta */
+}
+
+/* 2. Tamaños de texto inmensos (Mantenemos la coherencia de la marca) */
+.banner-preguntas h1 {
+    font-size: 4.5rem; 
+    letter-spacing: 1px;
+}
+.banner-preguntas p {
+    font-size: 2rem !important; 
+}
+
+/* ==================== RESPONSIVO PARA PREGUNTAS ==================== */
+@media (max-width: 768px) {
+    /* Dejamos que el banner crezca para acomodar todo */
+    .categoria-banner.banner-preguntas {
+        height: auto; 
+        padding: 40px 15px; 
+    }
+    
+    /* Achicamos los textos para pantallas móviles */
+    .banner-preguntas h1 {
+        font-size: 3rem; 
+    }
+    .banner-preguntas p {
+        font-size: 1.5rem !important;
+    }
+}

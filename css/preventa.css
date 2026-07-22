@@ -1,0 +1,147 @@
+/* ==================== TiTULO PREVENTA (BANNER) ==================== */
+
+.preventa-title-bg {
+    width: 100%;
+    /* Aqui colocas la NUEVA imagen de fondo para esta seccion */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../img/banner2.jpeg') no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.preventa-title-bg h3 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+/* ==================== TARJETAS DE PRODUCTO ==================== */
+
+.product-card {
+    transition: transform 0.3s ease;
+    background-color: #ffffff;
+}
+
+/* Título de la figura */
+.product-title {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-weight: 500;
+    /* Obliga al texto a ocupar máximo 2 líneas para alinear todas las tarjetas */
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Estilos para el precio */
+.product-price .price-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #E10080; /* Fucsia vibrante */
+}
+
+.price-currency {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #E10080; 
+    margin-left: 2px;
+}
+
+/* ==================== CONTENEDOR DE IMÁGENES (EFECTO DOBLE IMG) ==================== */
+
+.product-img-container {
+    overflow: hidden; 
+    position: relative; /* Clave para que la segunda imagen flote encima */
+}
+
+/* 1. Estilos de la imagen principal (Frente) */
+.product-img-container .img-main {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    object-fit: cover;
+    display: block;
+}
+
+/* 2. Estilos de la imagen secundaria (Reverso / Oculta) */
+.product-img-container .img-hover {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Totalmente invisible por defecto */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* ==================== EFECTOS HOVER DE LAS IMÁGENES ==================== */
+
+/* Ocultamos suavemente la imagen principal */
+.product-card-link:hover .product-img-container .img-main {
+    opacity: 0;
+}
+
+/* Hacemos aparecer la imagen secundaria con un sutil zoom */
+.product-card-link:hover .product-img-container .img-hover {
+    opacity: 1; 
+    transform: scale(1.05); 
+}
+
+/* ==================== BOTÓN VER MÁS ==================== */
+
+.btn-ver-mas {
+    color: #fff; /* Texto fucsia */
+    border: 2px solid #111; /* Borde fucsia */
+    background-color: #111;
+    padding: 10px 25px; /* Reducimos el ancho para un aspecto más cuadrado/rectangular */
+    border-radius: 8px; /* Bordes con un ligero redondeo (ya no es píldora) */
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover: se llena de color y se eleva (se mantiene igual) */
+.btn-ver-mas:hover {
+    background-color: #E10080;
+    color: #ffffff; /* El texto pasa a blanco */
+    transform: translateY(-4px); 
+    box-shadow: 0 8px 20px rgba(225, 0, 128, 0.3); 
+}
+
+/* Transición suave para la flecha */
+.btn-ver-mas i {
+    transition: transform 0.3s ease;
+}
+
+/* La flecha se mueve a la derecha al pasar el mouse */
+.btn-ver-mas:hover i {
+    transform: translateX(4px);
+}
+
+/* ==================== ESTILOS SWIPER PREVENTA ==================== */
+
+.swiperPreventa {
+    /* Aumentamos de 50px a 75px para darle mucha más separación a las tarjetas */
+    padding-bottom: 75px !important; 
+    --swiper-pagination-color: #E10080; 
+}
+
+.swiperPreventa .swiper-pagination {
+    /* Lo bajamos al límite absoluto del contenedor */
+    bottom: 0 !important; 
+}
+
+/* Puntitos inactivos (ESTO SE MANTIENE IGUAL) */
+.swiperPreventa .swiper-pagination-bullet {
+    background-color: #bbbbbb; 
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important;
+    transition: all 0.3s ease;
+}
+
+/* Puntito activo (ESTO SE MANTIENE IGUAL) */
+.swiperPreventa .swiper-pagination-bullet-active {
+    background-color: #E10080; 
+    transform: scale(1.3);
+}

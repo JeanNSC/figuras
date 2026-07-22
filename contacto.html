@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Store - Contacto</title>
+    <!-- Icono de la pestaña (Favicon) -->
+    <link rel="icon" type="image/png" href="img/logo2.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preload.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/banner-tienda.css">
+    <link rel="stylesheet" href="css/banner-about.css">
+    <link rel="stylesheet" href="css/banner-contact.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/canales-contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body class="no-scroll">
+
+    <!-- ==================== PANTALLA DE CARGA (VIDEO) ==================== -->
+    <div id="preloader">
+        <img src="img/preload.webp" class="custom-logo-loader">
+    </div>
+
+    <!-- ========================================================================================
+                                           HEADER
+     =========================================================================================--> 
+    <header class="sticky-top" style="z-index: 1050;">
+        <div class="top-header py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/logo.png" alt="Logo OtakuBazaar" class="img-fluid logo-img">
+                        </a>
+                    </div>
+
+                    <div class="col-md-4 mb-md-0 d-flex justify-content-center">
+                        <div class="search-bar position-relative w-100" style="max-width: 350px;">
+                            <input type="text" class="form-control rounded-pill border-0 py-2 ps-4 pe-5" placeholder="Texto a buscar...">
+                            <button type="submit" class="btn border-0 position-absolute end-0 top-0 h-100 pe-3 text-muted">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-none d-md-flex justify-content-md-end align-items-center">
+                        <div class="social-links d-flex gap-2">
+                            <a href="#" class="social-icon text-dark" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="TikTok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-nav-custom p-0" id="mainNavbar">
+            <div class="container-fluid px-0">
+                
+                <!-- 1. BOTÓN HAMBURGUESA: Cambiamos a data-bs-toggle="offcanvas" -->
+                <button class="navbar-toggler m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bottomNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 2. MENÚ LATERAL: Cambiamos 'offcanvas-end' por 'offcanvas-start' (Izquierda) -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="bottomNav">
+                    
+                    <!-- Cabecera del menú lateral (Sin título, solo la "X" alineada a la derecha) -->
+                    <div class="offcanvas-header justify-content-end">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                    </div>
+
+                    <!-- Cuerpo del menú -->
+                    <div class="offcanvas-body p-0 p-lg-2 justify-content-center">
+                        <ul class="navbar-nav gap-0 gap-lg-4 text-start text-lg-center w-100 justify-content-center">
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PREVENTA</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PELUCHES</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MANGAS Y REVISTAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">TCG</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MERCH VARIOS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS +18</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="preguntas.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="locales.html">TIENDAS</a></li>
+                        </ul>
+                        <div class="offcanvas-social d-flex justify-content-center gap-3 py-4 mt-auto">
+                            <a href="#" class="mobile-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================================================================
+                                BANNER DE CONTACTO
+        =========================================================================================--> 
+        <section class="categoria-banner banner-contacto" data-aos="fade-in" data-aos-duration="1000">
+            <!-- Contenedor Flexbox (Misma estructura que About) -->
+            <div class="banner-content d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 gap-md-4">
+                
+                <!-- Imagen de la mascota (Versión Contacto con el sobre) -->
+                <!-- IMPORTANTE: Ajusta esta ruta a tu imagen real -->
+                <img src="img/contact/logo-contact.svg" alt="Mascota Darko Correo" class="logo-mascota-banner order-2 order-md-1">
+                
+                <!-- Contenedor de Textos -->
+                <div class="text-white text-center text-md-start order-1 order-md-2">
+                    <h1 class="fw-bold mb-0 text-shadow-soft">Meow!</h1>
+                    <p class="fs-3 mb-0 fw-light text-shadow-soft">La atención al darkliente es nuestra pasión</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                CUERPO DE CONTACTO
+        =========================================================================================--> 
+        <section class="cuerpo-contacto py-5 my-4">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- Columna Izquierda (9/12): Textos y Redes -->
+                    <div class="col-12 col-md-9 mb-5 mb-md-0 espacio-desktop">
+                        
+                        <!-- Título -->
+                        <h1 class="fw-bold mb-3 title-contact">¡Contáctanos!</h1>
+                        
+                        <!-- Línea negra sólida -->
+                        <hr class="contacto-divider">
+                        
+                        <!-- Contenido de Texto -->
+                        <div class="contacto-text">
+                            <p>En <span class="fw-bold">Darko Store</span> ponemos a tu alcance tus figuras de colección japonesas favoritas; los productos que vendemos son originales e importadas directamente desde el país del sol naciente.</p>
+                            
+                            <p>Somos coleccionistas que venden a otros coleccionistas, por lo que tratamos de brindar los mejores precios y el mejor servicio.</p>
+                            
+                            <!-- Lista sin viñetas por defecto de Bootstrap, usando los puntos de texto -->
+                            <ul class="list-unstyled my-4">
+                                <li class="mb-2">• ¿Quieres iniciar tu colección pero no sabes cómo o por dónde empezar?</li>
+                                <li class="mb-2">• ¿Tienes dudas referente al proceso de compra?</li>
+                                <li class="mb-2">• ¿Te caímos bien y quieres donar sinko peso para apoyarnos para que dejemos de comer atún?</li>
+                            </ul>
+                            
+                            <p>No dudes en contactarnos en cualquiera de nuestras redes sociales.</p>
+                        </div>
+
+                        <!-- Imágenes de Redes Sociales -->
+                        <div class="redes-contacto mt-5 d-flex gap-4">
+                            <!-- IMPORTANTE: Cambia las rutas de las imágenes por las tuyas -->
+                            <a href="#" target="_blank" class="red-link">
+                                <img src="img/redes_sociales/face.svg" alt="Facebook" class="img-fluid">
+                            </a>
+                            <a href="#" target="_blank" class="red-link">
+                                <img src="img/redes_sociales/insta.svg" alt="Instagram" class="img-fluid">
+                            </a>
+                            <a href="#" target="_blank" class="red-link">
+                                <img src="img/redes_sociales/youtube.svg" alt="YouTube" class="img-fluid">
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Columna Derecha (3/12): Imagen de la mascota -->
+                    <div class="col-12 col-md-3 text-center text-md-end">
+                        <!-- IMPORTANTE: Cambia la ruta por la de tu imagen real -->
+                        <img src="img/contact/contacto.svg" alt="Darko Store Mascota" class="img-fluid imagen-mascota-contacto">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================================================================================
+                                CANALES DE ATENCIÓN
+        =========================================================================================--> 
+        <section class="canales-section">
+            <div class="container">
+                <div class="row text-center align-items-center justify-content-center">
+
+                    <!-- Canal 1: Horarios -->
+                    <div class="col-12 col-md-4 mb-5 mb-md-0">
+                        <div class="canal-box d-flex flex-column align-items-center">
+                            <!-- Ícono de Reloj SVG -->
+                            <i class="fa-regular fa-clock canal-icon"></i>
+                            <h3 class="canal-title">Horarios</h3>
+                            <p class="canal-text">
+                                Lunes a Sábado <br>
+                                9:00 am a 9:00 pm
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Canal 2: Email -->
+                    <div class="col-12 col-md-4 mb-5 mb-md-0">
+                        <div class="canal-box d-flex flex-column align-items-center">
+                            <!-- Ícono de Correo SVG -->
+                            <i class="fa-regular fa-envelope canal-icon"></i>
+                            <h3 class="canal-title">Email</h3>
+                            <p class="canal-text mt-3">
+                                info@darkostore.com
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Canal 3: Ubicación -->
+                    <div class="col-12 col-md-4">
+                        <div class="canal-box d-flex flex-column align-items-center">
+                            <!-- Ícono de Ubicación SVG -->
+                            <i class="fa-solid fa-location-dot canal-icon"></i>
+                            <h3 class="canal-title">Ubicación</h3>
+                            <p class="canal-text mt-3">
+                                Guadalajara | Jalisco | MX
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+                    
+    </main>
+
+    <!-- ========================================================================================
+                                                    FOOTER
+    =========================================================================================-->
+    <footer class="footer-bg py-4 border-top border-dark">
+        <div class="container-fluid px-md-5">
+            
+            <div class="row align-items-center text-center">
+                
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <a href="index.html">
+                        <img src="img/logo2.png" alt="Logo Tienda" class="img-fluid footer-logo">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    
+                    <div class="footer-nav mb-2">
+                        <a href="index.html">Inicio</a> <span class="text-white mx-1">|</span>
+                        <a href="about.html">Acerca de</a> <span class="text-white mx-1">|</span>
+                        <a href="preguntas.html">FAQ</a> <span class="text-white mx-1">|</span>
+                        <a href="locales.html">Tiendas</a> <span class="text-white mx-1">|</span>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                    
+                    <div class="footer-legal">
+                        <p class="text-white mt-1 mb-0 copyright-text">© 2026 Tu Tienda. Todos los derechos reservados.</p>
+                        <p class="text-white mt-1 mb-0 copyright-text">
+                            Hecho con <i class="fa-solid fa-heart mx-1" style="color: #E10080;"></i> por 
+                            <!-- Cambia el link del href por tu URL real -->
+                            <a href="#" target="_blank" class="navito-link">NavitoSc</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="footer-social">
+                        <a href="#" class="footer-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/iniciador.js"></script>
+    <script src="js/preload.js"></script>
+</body>
+</html>

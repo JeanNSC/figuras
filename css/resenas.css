@@ -1,0 +1,162 @@
+/* ==================== ESTILOS SECCIÓN RESEÑAS ==================== */
+
+.resenas-bg {
+    /* El linear-gradient aclara la imagen para que el texto y las reseñas no se pierdan */
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%), 
+                      url('../img/reseñas/fondo-movil.png');
+    
+    background-size: cover;
+    background-position: center top; /* Asegura que el degradado empiece bien desde arriba */
+    background-attachment: scroll;
+    position: relative;
+}
+
+/* Líneas laterales del título (Exactamente como Fabricantes) */
+.resenas-header .line-divider {
+    flex-grow: 1; 
+    height: 1px; 
+    background-color: #000; 
+    max-width: 60px; 
+}
+
+.resenas-header h3 {
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+}
+
+/* Caja contenedora para simular un smartphone flotante */
+.resena-card {
+    border-radius: 18px; 
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); 
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 340px; /* Aumentado de 260px a 340px para que la imagen pueda ensancharse */
+    margin: 0 auto;
+}
+
+/* Imagen vertical */
+.resena-img {
+    width: 100%;
+    height: auto;
+    max-height: 600px; /* Aumentado de 460px a 600px para que mantenga la proporción vertical al ser más ancha */
+    object-fit: cover;
+    display: block;
+}
+
+/* Efecto hover: se eleva un poco y resalta con tu fucsia de marca */
+.resena-card:hover {
+    box-shadow: 0 12px 24px rgba(225, 0, 128, 0.15);
+    border-color: #d669a7;
+}
+
+/* ==================== PAGINACIÓN DEL SLIDER ==================== */
+
+.resenas-pagination {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 30px;
+}
+
+/* Color fucsia para el puntito de la reseña activa */
+.resenas-pagination .swiper-pagination-bullet-active {
+    background-color: #E10080 !important;
+    width: 10px;
+    height: 10px;
+}
+
+/* ==================== BOTÓN INSTAGRAM ==================== */
+
+.btn-instagram {
+    color: #E10080; /* El fucsia de tu marca */
+    border: 2px solid #E10080;
+    background-color: transparent;
+    padding: 10px 30px;
+    border-radius: 8px; /* Bordes redondeados que pediste anteriormente */
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* El ícono de Instagram */
+.btn-instagram i {
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover: Gradiente oficial de Instagram */
+.btn-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent; /* Oculta el borde fucsia para que el degradado brille */
+    color: #ffffff; /* Texto a blanco */
+    transform: translateY(-4px); /* Ligero salto */
+    box-shadow: 0 8px 20px rgba(220, 39, 67, 0.4); /* Sombra cálida estilo IG */
+}
+
+/* El ícono de Instagram hace un pequeño giro animado */
+.btn-instagram:hover i {
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* ==================== ESTILOS DEL LIGHTBOX ==================== */
+
+/* Cambia el cursor a una 'lupita' o 'mano' para indicar que es clickeable */
+.img-lightbox {
+    cursor: pointer; 
+}
+
+/* 1. OSCURECER EL FONDO (BACKDROP) */
+/* Bootstrap por defecto usa 0.5. Al subirlo a 0.9 logramos un fondo casi negro puro */
+.modal-backdrop.show {
+    opacity: 0.9 !important; 
+}
+
+/* 2. PERSONALIZAR EL BOTÓN DE CERRAR (X) */
+#lightboxModal .btn-close {
+    background-color: #E10080; /* Círculo con el color Fucsia de tu marca */
+    opacity: 1; /* Quitamos la transparencia por defecto */
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 4px 15px rgba(225, 0, 128, 0.4); /* Sombra fucsia */
+    
+    /* Reemplazamos la X nativa negra por una blanca dibujada en código SVG */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") !important;
+    
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre la "X" */
+#lightboxModal .btn-close:hover {
+    transform: scale(1.15) rotate(90deg); /* Crece y da un pequeño giro dinámico */
+    background-color: #b30066; /* Un fucsia un poco más oscuro al dar clic */
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .resenas-bg {
+        /* Vuelve a cargar tu imagen horizontal original para pantallas grandes (fondo.png) */
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 30%), 
+                          url('../img/reseñas/fondo.png');
+        
+        background-attachment: fixed; 
+    }
+}
+
+/* ==================== BOTÓN INSTAGRAM (MODO MÓVIL) ==================== */
+
+/* Obligamos a que en celulares el botón ya tenga el degradado y estilos del hover por defecto */
+@media (max-width: 767px) {
+    .btn-instagram {
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        border-color: transparent; 
+        color: #ffffff; 
+        box-shadow: 0 6px 15px rgba(220, 39, 67, 0.4); 
+    }
+    
+    /* El ícono ya estará un poco más grande por defecto en celular */
+    .btn-instagram i {
+        transform: scale(1.1);
+    }
+}

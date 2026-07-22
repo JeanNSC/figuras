@@ -1,0 +1,58 @@
+/* ==================== SECCIÓN DE CANALES DE ATENCIÓN ==================== */
+
+/* Fondo general de la sección */
+.canales-section {
+    /* IMPORTANTE: Coloca aquí la ruta de tu imagen de fondo con las líneas grises */
+    background-image: url('../img/contact/background.svg'); 
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f4f4f4; /* Color de respaldo si la imagen falla */
+    padding: 80px 0; /* Da un respiro excelente arriba y abajo */
+}
+
+/* Control de los íconos SVG */
+.canal-icon {
+    font-size: 5rem; /* Controlamos el tamaño del ícono como si fuera texto */
+    color: #000000; 
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto opcional al pasar el mouse por encima de la columna */
+.canal-box:hover .canal-icon {
+    transform: translateY(-5px); /* Salta un poquito hacia arriba */
+    color: #FF0062; /* Se pinta fucsia al hacer hover */
+}
+
+/* Tipografía de los Títulos */
+.canal-title {
+    font-weight: 900; /* Extra negrita para que resalte */
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px; /* Junta un pelín las letras para darle toque moderno */
+}
+
+/* Tipografía de los textos descriptivos */
+.canal-text {
+    font-size: 1.1rem;
+    color: #333333;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==================== RESPONSIVO PARA CANALES ==================== */
+@media (max-width: 768px) {
+    .canales-section {
+        padding: 50px 0; /* Reducimos un poco el padding en móviles */
+    }
+    
+    .canal-icon {
+        font-size: 4rem; /* Un poco más pequeños en celular */
+    }
+
+    .canal-title {
+        font-size: 1.6rem;
+    }
+}

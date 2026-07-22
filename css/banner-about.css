@@ -1,0 +1,50 @@
+/* ==================== MODIFICADORES PARA EL BANNER "ABOUT" ==================== */
+
+/* 1. Cambiamos la imagen de fondo específicamente para esta página */
+.categoria-banner.banner-about {
+    background-image: url('../img/about/about-banner.jpg'); /* Ajusta tu ruta */
+}
+
+/* 2. Estilos para la imagen de la mascota (MUCHO MÁS GRANDE) */
+.logo-mascota-banner {
+    width: 200px; /* Aumentado de 140px a 200px para PC */
+    height: auto;
+    z-index: 2; 
+}
+
+/* 3. Textos más grandes para PC */
+.banner-about h1 {
+    font-size: 4.5rem; /* Título inmenso */
+    letter-spacing: 1px;
+}
+.banner-about p {
+    font-size: 2rem !important; /* Forzamos el tamaño del subtítulo */
+}
+
+/* 4. Sombra suave para los textos */
+.text-shadow-soft {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* ==================== RESPONSIVO (CELULARES Y TABLETS) ==================== */
+@media (max-width: 768px) {
+    /* Dejamos que el banner crezca para acomodar los elementos más grandes */
+    .categoria-banner.banner-about {
+        height: auto; 
+        padding: 40px 15px; 
+    }
+
+    /* Mascota más grande en celular */
+    .logo-mascota-banner {
+        width: 200px; /* Aumentado de 80px a 120px */
+        margin-bottom: 10px; /* Separación extra si se pone encima del texto */
+    }
+    
+    /* Textos más grandes en celular */
+    .banner-about h1 {
+        font-size: 3rem; 
+    }
+    .banner-about p {
+        font-size: 1.5rem !important;
+    }
+}

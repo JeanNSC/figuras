@@ -1,0 +1,182 @@
+/* ==================== CUERPO DE LA TIENDA (PRODUCTOS Y SIDEBAR) ==================== */
+
+/* ------ 1. Tarjetas de Producto ------ */
+.tienda-card {
+    transition: transform 0.3s ease;
+    padding-bottom: 15px;
+    height: 100%; /* Ayuda a alinear las tarjetas */
+}
+
+.tienda-card:hover {
+    transform: translateY(-5px);
+}
+
+/* El fondo grisáceo por defecto para las fotos de fondo transparente/blanco */
+.tienda-img-container {
+    background-color: #f6f7f9; 
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tienda-img-container img {
+    transition: transform 0.4s ease;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Obliga a que todas las imágenes sean cuadradas perfectas */
+}
+
+.tienda-card:hover .tienda-img-container img {
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+}
+
+/* Título truncado a 2 líneas para mantener la simetría */
+.tienda-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #333;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 2.8em; /* Mantiene la misma altura aunque el título sea de 1 línea */
+}
+
+/* El color verde menta calcado de tu imagen de referencia */
+.tienda-price {
+    color: #5CCCA8; 
+    font-size: 1.15rem;
+}
+
+/* ------ 2. Etiquetas (Badges) sobre la imagen ------ */
+.badge-tienda {
+    font-size: 0.65rem;
+    padding: 5px 8px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.badge-preventa { background-color: #1a1a1a; color: #fff; }
+.badge-stock { background-color: #555555; color: #fff; }
+.badge-online { background-color: #3b3b3b; color: #fff; }
+.badge-agotado { background-color: #2c3e50; color: #fff; }
+.badge-oferta { background-color: #e74c3c; color: #fff; } /* Descuentos en rojo */
+
+/* ------ 3. Barra Lateral (Sidebar) ------ */
+.sidebar-img-link {
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar-img-link:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sidebar-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sidebar-social-icon:hover {
+    background-color: #FF0062; /* Fucsia de DarkoStore */
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(255, 0, 98, 0.4);
+}
+
+/* ------ 4. Redes Sociales como Imágenes ------ */
+.sidebar-social-img-link {
+    display: inline-block;
+    width: 48px; /* Ajusta este valor si quieres los iconos más grandes o más chicos */
+    height: 48px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Le da el borde redondeado calcado de tu imagen */
+    overflow: hidden; /* Asegura que la imagen no se salga del borde redondeado */
+}
+
+.sidebar-social-img-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Efecto al pasar el mouse por encima */
+.sidebar-social-img-link:hover {
+    transform: translateY(-4px); /* Da un pequeño salto hacia arriba */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Crea una sombra suave */
+}
+
+/* ==================== ETIQUETA DE OFERTA VERDE NEÓN ==================== */
+.discount-badge {
+    display: inline-block !important; /* Evita que se estire a todo el ancho */
+    width: auto !important; /* Asegura que solo mida lo que mide el texto */
+    background-color: #34ff88 !important; /* El verde de tu imagen */
+    color: #000000 !important; /* Texto en negro */
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 6px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important; /* La sombra oscura */
+    z-index: 3;
+}
+
+/* ==================== PAGINADOR ==================== */
+.custom-pagination {
+    list-style: none;
+    padding-left: 0;
+    gap: 15px; /* Separación entre números */
+    flex-wrap: wrap; /* Evita que se rompa en celulares pequeños */
+}
+
+.custom-pagination li a, 
+.custom-pagination li span {
+    text-decoration: none;
+    color: #1a1a1a; /* Color oscuro para los números inactivos */
+    font-size: 1.1rem;
+    padding: 8px 18px;
+    border-radius: 6px; /* Bordes ligeramente redondeados */
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* El cuadrito rosa para la página actual */
+.custom-pagination li.active a {
+    background-color: #FF0062; /* Fucsia */
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Efecto al pasar el mouse por los otros números */
+.custom-pagination li a:hover:not(.active) {
+    color: #FF0062;
+}
+
+.custom-pagination li .dots {
+    padding: 8px 5px;
+    color: #1a1a1a;
+}
+
+.custom-pagination li .next-arrow {
+    font-size: 1.3rem;
+    padding: 6px 10px;
+}
+
+/* La línea negra sólida debajo del paginador */
+.pagination-line {
+    border: none;
+    border-top: 2px solid #000; /* Grosor y color de la línea */
+    opacity: 1; /* Obliga a que sea 100% visible */
+    margin-top: 5px;
+}

@@ -1,0 +1,85 @@
+/* ==================== SECCIÓN LOCALES FÍSICOS ==================== */
+
+/* Títulos con tipografía elegante y espaciada */
+.local-title {
+    font-weight: 300; /* Letra más delgada como en la imagen */
+    letter-spacing: 1.5px;
+    font-size: 1.8rem;
+    color: #333333;
+}
+
+/* Control del contenedor de imágenes para que tengan el mismo tamaño */
+.local-img {
+    max-width: 450px;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Fuerza a que las imágenes sean cuadradas */
+    object-fit: cover; /* Recorta el sobrante sin deformar la foto */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Sombra muy sutil */
+}
+
+/* Iconos y textos de la información */
+.local-icon {
+    font-size: 1.1rem;
+    color: #000000;
+}
+.local-info p {
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+/* Línea divisoria suave */
+.local-divider {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    opacity: 1;
+    margin: 40px 0;
+}
+
+/* ==================== BOTONES LOCALES ==================== */
+
+/* Botón Sólido (Fondo Negro) */
+.btn-local-solid {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #1a1a1a;
+    border-radius: 0; /* Bordes cuadrados exactos a la imagen */
+    padding: 10px 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+.btn-local-solid:hover {
+    background-color: #FF0062; /* Se vuelve fucsia Darko */
+    border-color: #FF0062;
+    color: #ffffff;
+}
+
+/* Botón Outline (Borde Negro, Fondo Transparente) */
+.btn-local-outline {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    border-radius: 0; 
+    padding: 10px 25px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+.btn-local-outline:hover {
+    background-color: #FF0062;
+    border-color: #FF0062;
+    color: #ffffff;
+}
+
+/* ==================== RESPONSIVO PARA LOCALES ==================== */
+@media (max-width: 768px) {
+    /* Centramos los botones en móviles */
+    .px-md-5 .d-flex {
+        justify-content: center;
+    }
+    .local-title {
+        text-align: center;
+    }
+}

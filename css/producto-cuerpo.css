@@ -1,0 +1,178 @@
+/* ==================== DETALLE DE PRODUCTO ==================== */
+
+/* Textos principales */
+.product-title-detail {
+    font-size: 1.6rem;
+    line-height: 1.3;
+}
+
+.product-price-detail {
+    font-size: 2.3rem;
+    color: #181B29;
+}
+
+/* Espaciado de las características */
+.product-specs li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+
+/* Enlaces rosas/rojos de Categorías y Tags */
+.meta-link {
+    color: #e83e8c; /* Color fucsia oscuro parecido a tu imagen */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.meta-link:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+/* La caja que envuelve la foto tendrá tu color de fondo */
+.tint-wrapper {
+    background-color: #27FF93; 
+    display: block; /* Evita espacios en blanco debajo de la imagen */
+}
+
+/* Miniaturas */
+.thumbnail-img {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+
+.thumbnail-img:hover {
+    opacity: 1;
+}
+
+.thumbnail-img.active {
+    opacity: 1;
+    border: 2px solid #27FF93 !important; /* Resalta la imagen activa con borde negro */
+}
+
+/* Transición suave para el cambio de imágenes en la galería */
+#main-product-img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+
+/* Botón Añadir al Carrito / Solicitar */
+.btn-add-cart {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #000000; /* Borde definido para evitar saltos al hacer hover */
+    border-radius: 4px;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    /* Cambiamos a 'all' para animar el color, la posición y la sombra al mismo tiempo */
+    transition: all 0.3s ease; 
+}
+
+/* Efecto Hover Llamativo y Congruente */
+.btn-add-cart:hover {
+    background-color: #FF0062; /* Tu fucsia de marca */
+    border-color: #FF0062;
+    color: #ffffff;
+    transform: translateY(-3px); /* El botón se "levanta" ligeramente */
+    box-shadow: 0 8px 15px rgba(255, 0, 98, 0.4); /* Crea un resplandor fucsia debajo */
+}
+
+/* Efecto Active (cuando el usuario hace clic sostenido) */
+.btn-add-cart:active {
+    transform: translateY(0); /* Vuelve a su posición original al presionarlo */
+    box-shadow: 0 2px 5px rgba(255, 0, 98, 0.4); /* La sombra se hace más pequeña */
+}
+
+/* Cursor de lupa para la imagen principal */
+.cursor-zoom {
+    cursor: zoom-in;
+}
+
+/* ==================== ESTILOS DEL MODAL DE GALERÍA ==================== */
+
+/* 1. Oscurecer el fondo detrás de la imagen */
+.modal-backdrop.show {
+    opacity: 0.9 !important; /* Sube la opacidad (0.5 por defecto). 0.9 es casi negro total */
+    background-color: #000000;
+}
+
+/* 2. Diseño del botón de cerrar personalizado */
+.btn-close-gallery {
+    position: absolute;
+    top: -20px; /* Lo subimos un poquito más porque ahora es más grande */
+    right: -20px;
+    z-index: 1060;
+    
+    /* Colores de tu marca */
+    background-color: #FF0062; 
+    color: #ffffff;
+     
+    
+    /* Forma y tamaño aumentados */
+    border-radius: 50%;
+    width: 55px; /* Antes era 45px */
+    height: 55px; /* Antes era 45px */
+    padding: 0; /* Asegura que no haya espacios internos ocultos */
+    
+    /* Centrado perfecto con Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    /* Sombra fucsia suave */
+    box-shadow: 0 4px 10px rgba(255, 0, 98, 0.4);
+    
+    /* Transición para el hover */
+    transition: all 0.3s ease;
+}
+
+/* 3. Efecto al pasar el mouse por el botón de cerrar */
+.btn-close-gallery:hover {
+    background-color: #ffffff;
+    color: #FF0062;
+    border-color: #FF0062;
+    transform: scale(1.1) rotate(90deg); 
+    box-shadow: 0 6px 15px rgba(255, 0, 98, 0.7);
+}
+
+/* Ajuste para celulares: que el botón no se salga de la pantalla */
+@media (max-width: 768px) {
+    .btn-close-gallery {
+        width: 45px; /* En celular lo achicamos un poquito para que no estorbe */
+        height: 45px;
+        top: -10px;
+        right: 0px;
+    }
+    /* Achicamos también el SVG en celular */
+    .btn-close-gallery svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* ==================== PAGOS Y ENVÍOS (SIDEBAR DERECHO) ==================== */
+
+/* Contenedor general para darle un respiro respecto al botón */
+.payment-shipping-sidebar {
+    padding-top: 10px;
+}
+
+/* Títulos de las secciones */
+.payment-shipping-sidebar .title-sidebar {
+    font-weight: 700;
+    color: #000000;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* Imágenes de los métodos */
+.payment-shipping-sidebar .img-payment {
+    max-width: 85%; /* Hace que la imagen no choque con los bordes */
+    margin-bottom: 5px; /* Espacio antes de la siguiente línea */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+}

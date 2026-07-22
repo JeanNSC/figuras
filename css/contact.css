@@ -1,0 +1,62 @@
+/* ==================== CUERPO DE CONTACTO ==================== */
+
+/* Línea negra debajo del título */
+.contacto-divider {
+    border: none;
+    border-top: 3px solid #000000;
+    opacity: 1; 
+    margin-bottom: 25px; 
+}
+
+/* Estilos de los textos para una lectura cómoda */
+.contacto-text p, 
+.contacto-text li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Control del tamaño de los iconos de redes sociales */
+.redes-contacto img {
+    width: 100px; /* Ajusta este valor si tus imágenes originales son muy grandes o pequeñas */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por las redes sociales */
+.red-link:hover img {
+    transform: translateY(-5px) scale(1.05); /* El icono salta un poquito y crece */
+}
+
+/* Imagen de la mascota derecha */
+.imagen-mascota-contacto {
+    max-width: 100%;
+    /* Si en pantallas muy grandes la imagen de la derecha es muy pequeña, puedes forzar un tamaño aquí. 
+       Por ejemplo: min-width: 250px; */
+}
+
+/* ==================== RESPONSIVO PARA CONTACTO ==================== */
+@media (max-width: 768px) {
+    /* Centramos la mascota en celulares y le damos separación */
+    .imagen-mascota-contacto {
+        max-width: 200px;
+        margin-top: 40px;
+    }
+    
+    /* Centramos las redes sociales en celular */
+    .redes-contacto {
+        justify-content: center;
+    }
+    
+    .redes-contacto img {
+        width: 80px; /* Redes un poco más pequeñas en móvil */
+    }
+}
+
+/* ==================== SEPARACIÓN DE COLUMNAS (CONTACTO) ==================== */
+
+@media (min-width: 768px) {
+    .espacio-desktop {
+        padding-right: 9rem; /* Esto crea un espacio amplio y limpio entre el texto y la imagen */
+    }
+}

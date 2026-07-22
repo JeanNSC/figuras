@@ -1,0 +1,45 @@
+/* ==================== ESTILOS DEL HERO SLIDER ==================== */
+#mainBannerSlider {
+    margin-bottom: 50px; 
+}
+
+.hero-slider .carousel-item img {
+    width: 100%;
+    /* 65vh significa que ocupará el 65% de la altura de la pantalla del celular. 
+       Puedes subirlo a 75vh si quieres que sea aún más alto */
+    height: 65vh; 
+    object-fit: cover; 
+    object-position: center top; /* Asegura que no se corte la cabeza de las figuras */
+}
+
+/* Personalización de los puntitos inferiores */
+.custom-indicators {
+    bottom: -40px !important; 
+    margin-bottom: 0 !important;
+}
+
+.custom-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%; /* Puntitos circulares */
+    background-color: #888888; /* Blancos por defecto */
+    border: none;
+    opacity: 0.6;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+}
+
+/* El puntito de la imagen que se está mostrando actualmente */
+.custom-indicators .active {
+    background-color: #21E672; /* El verde vibrante de tu diseño */
+    opacity: 1;
+    transform: scale(1.3); /* Crece un poquito para destacar */
+    box-shadow: 0 0 8px rgba(33, 230, 114, 0.6);
+}
+
+@media (min-width: 768px) {
+    .hero-slider .carousel-item img {
+        height: auto; /* Anulamos el vh de arriba */
+        max-height: 500px; /* Tu límite original para que no ocupe toda la pantalla en PC */
+    }
+}

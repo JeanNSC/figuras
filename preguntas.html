@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Store - Preguntas Frecuentes</title>
+    <!-- Icono de la pestaña (Favicon) -->
+    <link rel="icon" type="image/png" href="img/logo2.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preload.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/banner-tienda.css">
+    <link rel="stylesheet" href="css/banner-about.css">
+    <link rel="stylesheet" href="css/banner-faq.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body class="no-scroll">
+
+    <!-- ==================== PANTALLA DE CARGA (VIDEO) ==================== -->
+    <div id="preloader">
+        <img src="img/preload.webp" class="custom-logo-loader">
+    </div>
+
+    <!-- ========================================================================================
+                                           HEADER
+     =========================================================================================--> 
+    <header class="sticky-top" style="z-index: 1050;">
+        <div class="top-header py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/logo.png" alt="Logo OtakuBazaar" class="img-fluid logo-img">
+                        </a>
+                    </div>
+
+                    <div class="col-md-4 mb-md-0 d-flex justify-content-center">
+                        <div class="search-bar position-relative w-100" style="max-width: 350px;">
+                            <input type="text" class="form-control rounded-pill border-0 py-2 ps-4 pe-5" placeholder="Texto a buscar...">
+                            <button type="submit" class="btn border-0 position-absolute end-0 top-0 h-100 pe-3 text-muted">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-none d-md-flex justify-content-md-end align-items-center">
+                        <div class="social-links d-flex gap-2">
+                            <a href="#" class="social-icon text-dark" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="TikTok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-nav-custom p-0" id="mainNavbar">
+            <div class="container-fluid px-0">
+                
+                <!-- 1. BOTÓN HAMBURGUESA: Cambiamos a data-bs-toggle="offcanvas" -->
+                <button class="navbar-toggler m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bottomNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 2. MENÚ LATERAL: Cambiamos 'offcanvas-end' por 'offcanvas-start' (Izquierda) -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="bottomNav">
+                    
+                    <!-- Cabecera del menú lateral (Sin título, solo la "X" alineada a la derecha) -->
+                    <div class="offcanvas-header justify-content-end">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                    </div>
+
+                    <!-- Cuerpo del menú -->
+                    <div class="offcanvas-body p-0 p-lg-2 justify-content-center">
+                        <ul class="navbar-nav gap-0 gap-lg-4 text-start text-lg-center w-100 justify-content-center">
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PREVENTA</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PELUCHES</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MANGAS Y REVISTAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">TCG</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MERCH VARIOS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS +18</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="preguntas.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="locales.html">TIENDAS</a></li>
+                        </ul>
+                        <div class="offcanvas-social d-flex justify-content-center gap-3 py-4 mt-auto">
+                            <a href="#" class="mobile-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================================================================
+                                BANNER PREGUNTAS
+        =========================================================================================--> 
+        <section class="categoria-banner banner-preguntas" data-aos="fade-in" data-aos-duration="1000">
+            <div class="banner-content d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 gap-md-5">
+                
+                <!-- Contenedor de Textos (A la Izquierda en PC, Abajo en celular) -->
+                <div class="text-white text-center text-md-start order-1 order-md-1">
+                    <h1 class="fw-bold mb-0 text-shadow-soft">Preguntas frecuentes</h1>
+                    <p class="fs-3 mb-0 fw-light text-shadow-soft">Cómo comprar en Darko Store</p>
+                </div>
+
+                <!-- Imagen de la mascota (A la Derecha en PC, Arriba en celular) -->
+                <!-- IMPORTANTE: Ajusta esta ruta a tu imagen real -->
+                <img src="img/faq/logo-faq.svg" alt="Mascota Darko Laptop" class="logo-mascota-banner order-2 order-md-2">
+
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                CUERPO DE FAQ
+        =========================================================================================--> 
+        <section class="faq-section py-5 my-4">
+            <div class="container">
+                <!-- Centramos el contenido para que no sea excesivamente ancho en PC -->
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-10">
+
+                        <!-- ================= Bloque 1: Intro FAQ ================= -->
+                        <div class="faq-block mb-5">
+                            <h2 class="fw-bold mb-3">FAQ - Preguntas frecuentes</h2>
+                            <hr class="faq-divider">
+                            <p class="faq-text">
+                                Tal vez no podemos resolver tus dudas existenciales, pero Umi-Chan está aquí para guiarte y explicarte cómo funciona la dinámica y logística de compras en nuestra tienda.
+                            </p>
+                        </div>
+
+                        <!-- ================= Bloque 2: Cómo comprar ================= -->
+                        <div class="faq-block mb-5">
+                            <h2 class="fw-bold mb-3">Cómo comprar</h2>
+                            <hr class="faq-divider">
+                            
+                            <div class="row align-items-center">
+                                <!-- Lado izquierdo: Textos -->
+                                <div class="col-12 col-md-8 col-lg-9 mb-4 mb-md-0">
+                                    <p class="faq-text">
+                                        Solicita la compra o apartado de la figura que quieres en alguna de nuestras redes sociales, ya sea <span class="text-fucsia">Facebook</span>, <span class="text-fucsia">Instagram</span> o por <span class="text-fucsia">Correo Electrónico</span>.
+                                    </p>
+                                    <p class="faq-text mb-0">
+                                        Nosotros nos encargaremos de corroborar la disponibilidad y el precio de la figura que buscas y te brindaremos la información necesaria para continuar con el proceso de compra.
+                                    </p>
+                                </div>
+                                
+                                <!-- Lado derecho: Imagen de Umi-Chan -->
+                                <div class="col-12 col-md-4 col-lg-3 text-center">
+                                    <!-- IMPORTANTE: Cambia la ruta por la de tu imagen real -->
+                                    <img src="img/faq/1.svg" alt="Umi-Chan Cómo comprar" class="img-fluid faq-mascota">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ================= Bloque 3: Catálogo ================= -->
+                        <div class="faq-block mb-5">
+                            <h2 class="fw-bold mb-3">Catálogo</h2>
+                            <hr class="faq-divider">
+                            
+                            <div class="row align-items-center">
+                                <!-- Lado izquierdo: Textos -->
+                                <div class="col-12 col-md-8 col-lg-9 mb-4 mb-md-0">
+                                    <p class="faq-text">
+                                        Empezamos a subir las figuras que iban saliendo en preventas a nuestra página web a partir de junio 2022; puedes ver nuestro catálogo anterior organizado en álbumes por fecha de salida <a href="#" class="text-fucsia fw-bold text-decoration-none">aquí</a>.
+                                    </p>
+                                    <p class="faq-text mb-0">
+                                        Sí buscas alguna figura que no esté en nuestro catálogo o que ya salió nos lo puedes hacer saber o nos puedes compartir foto de la figura que buscas para revisar si está con alguno de nuestros proveedores y brindarte información.
+                                    </p>
+                                </div>
+                                
+                                <!-- Lado derecho: Imagen de Umi-Chan (Catálogo) -->
+                                <div class="col-12 col-md-4 col-lg-3 text-center">
+                                    <!-- IMPORTANTE: Cambia la ruta por la de tu imagen real -->
+                                    <img src="img/faq/2.svg" alt="Umi-Chan Catálogo" class="img-fluid faq-mascota">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ================= Bloque 4: Preventas ================= -->
+                        <div class="faq-block mb-5">
+                            <h2 class="fw-bold mb-3">Preventas</h2>
+                            <hr class="faq-divider">
+                            
+                            <p class="faq-text">
+                                Las <strong>preventas</strong> se solicitan con el 10% de su costo -la cantidad mínima para apartar una figura es de $250 pesos- y se liquida en la primera quincena del mes de su fecha de salida.
+                            </p>
+
+                            <!-- Q1 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Hay algún límite de preventas?</p>
+                            <p class="faq-text">
+                                Nope, ¿quiénes somos nosotros para limitarte? >w< puedes solicitar todas las preventas que quieras dando el apartado de la figura, sólo asegúrate de poder cubrir los gastos a tiempo o de lo contrario se cancelará la venta y perderás el apartado.
+                            </p>
+
+                            <!-- Q2 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Cuándo va a llegar mi preventa?</p>
+                            <p class="faq-text">
+                                Una vez que sale oficialmente la figura tarda alrededor de 2 a 4 semanas en llegar (el tiempo de llegada varia según aduana o el servicio de paquetería), nosotros te estaremos avisando cuando la envíen para que lo tomes en cuenta y vayas liquidando; si liquidaste tu figura en tiempo y forma te avisaremos cuando ya esté en nuestras manos para proseguir con la entrega o envío.
+                            </p>
+
+                            <!-- Q3 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Qué hago si me raptaron los ovnis y no podré pagar la preventa en su fecha de salida?</p>
+                            <p class="faq-text">
+                                Qué afortunado, por favor llévanos contigo -ok, no-<br>
+                                Tratamos de ser comprensivos y empáticos con nuestros darklientes, sí nos expones tu situación (porque también nos gusta el chisme) podemos acordar un plazo para pagar.
+                            </p>
+
+                            <!-- Q4 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">En realidad no me raptaron los ovnis, sólo necesitaba más tiempo para pagar...</p>
+                            <p class="faq-text">
+                                Ok, nosotros decidimos creer y confiar en ti, pero si no se liquida la figura en el plazo que acordamos se cancelará tu pedido.
+                            </p>
+
+                            <!-- Sub-bloque para Q5 (Texto + Imagen a la derecha) -->
+                            <div class="row align-items-center mt-4">
+                                <div class="col-12 col-md-8 col-lg-9">
+                                    <p class="faq-text fw-bold mb-1">Se agotó la preventa que quería, además de llorar, ¿qué hago?</p>
+                                    <p class="faq-text mb-0">
+                                        Puedes acompañar tus lágrimas con unos taquitos o un pan. <br>
+                                        En algunos casos se puede solicitar la preventa con pago completo (a veces se puede solicitar con la mitad de su costo, todo depende de nuestros proveedores) o puedes esperar a que salga la figura para traerla bajo pedido.
+                                    </p>
+                                </div>
+                                <div class="col-12 col-md-4 col-lg-3 text-center mt-3 mt-md-0">
+                                    <!-- IMPORTANTE: Cambia la ruta por la de tu imagen real -->
+                                    <img src="img/faq/3.svg" alt="Umi-Chan Llorando" class="img-fluid faq-mascota">
+                                </div>
+                            </div>
+
+                            <!-- Q6 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">Pedí una figura, ya pasó su fecha de salida y todavía no ha llegado TwT</p>
+                            <p class="faq-text">
+                                Las figuras en preventa pueden sufrir retrasos por causas ajenas a nosotros, ya sea por problemas de manufactura, atrasos en tiempos de entrega por parte del distribuidor o retenciones de aduana. Recomendamos invocarnos para preguntar el estatus de tu pedido y así saber si ha habido algún cambio en la fecha de salida de tu preventa o algún retraso del envío.
+                            </p>
+
+                            <!-- Q7 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">Atrasaron la preventa de mi waifu favorita, ¿qué hago? TwT</p>
+                            <p class="faq-text">
+                                Ser paciente y esperar; puedes cancelar, pero se pierde el apartado de tu figura. Los atrasos en fechas del fabricante son algo que sale de nuestro control, siempre agradecemos la empatía y comprensión.
+                            </p>
+                        </div>
+                        <!-- ================= Bloque 5: Pedidos ================= -->
+                        <div class="faq-block mb-5">
+                            <h2 class="fw-bold mb-3">Pedidos</h2>
+                            <hr class="faq-divider">
+                            
+                            <!-- Sub-bloque superior: Textos + Imagen -->
+                            <div class="row align-items-center mb-4">
+                                <!-- Lado izquierdo: Textos -->
+                                <div class="col-12 col-md-8 col-lg-9 mb-4 mb-md-0">
+                                    <p class="faq-text">
+                                        Si deseas adquirir alguna figura que ya salió la podemos traer especialmente para ti bajo pedido.
+                                    </p>
+                                    <p class="faq-text mb-0">
+                                        Si está disponible hacemos la cotización y te brindamos los detalles y costo n_n' para solicitarla das la mitad de su costo, nosotros la mandamos pedir a Japón y pagas el resto a su llegada.
+                                    </p>
+                                </div>
+                                
+                                <!-- Lado derecho: Imagen de Umi-Chan Pedidos -->
+                                <div class="col-12 col-md-4 col-lg-3 text-center">
+                                    <!-- IMPORTANTE: Cambia la ruta por la de tu imagen real -->
+                                    <img src="img/faq/4.svg" alt="Umi-Chan Pedidos" class="img-fluid faq-mascota">
+                                </div>
+                            </div>
+
+                            <!-- Q1 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Cuánto tiempo tarda en llegar una figura bajo pedido?</p>
+                            <p class="faq-text">
+                                El tiempo promedio de espera es de dos semanas (a veces puede variar un poco dependiendo de cómo se encuentre el servicio de envíos del país).
+                            </p>
+
+                            <!-- Q2 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Pueden conseguir otros artículos de colección?</p>
+                            <p class="faq-text">
+                                Depende del tipo de artículo que busques; nos especializamos en figuras de colección, pero a veces podemos hacer pactos con satán para poder traer merchandising de importación japonesa.
+                            </p>
+
+                            <!-- Q3 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Tengo que pagar impuestos? D:</p>
+                            <p class="faq-text">
+                                Nope, una vez que se te da el precio, queda fijo.
+                            </p>
+
+                            <!-- Q4 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Me pueden dar más tiempo para liquidar mi pedido?</p>
+                            <p class="faq-text">
+                                Sí, siempre y cuando nos informes el retraso de tu pago para acordar un plazo para pagar.
+                            </p>
+                        </div>
+                        <!-- ================= Bloque 6: Garantías ================= -->
+                        <div class="faq-block mb-5">
+                            <h2 class="fw-bold mb-3">Garantías</h2>
+                            <hr class="faq-divider">
+
+                            <!-- Q1 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Es seguro comprar con ustedes?</p>
+                            <p class="faq-text">
+                                Nuestro compromiso es con el darkliente, nos enfocamos en brindar atención y servicio de calidad, tenemos más de 10 años vendiendo figuras. Puedes revisar los comentarios y recomendaciones de algunos de nuestros darklientes <a href="#" class="text-fucsia text-decoration-none">aquí</a>.
+                            </p>
+
+                            <!-- Q2 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Las figuras son originales?</p>
+                            <p class="faq-text">
+                                Nuestros proveedores son distribuidores oficiales así que todas las figuras son originales, no vendemos replicas ni bootleg.
+                            </p>
+
+                            <!-- Q3 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Los precios son fijos?</p>
+                            <p class="faq-text">
+                                Una vez que apartas tu figura el precio queda fijo (incluso si pasa por aduana), Darko Store se encarga de absorber esos gastos.<br>
+                                Sólo en casos extraordinarios podría cambiar el precio, como la devaluación del peso ante el yen o cambio de dimensiones del fabricante y en dado caso se te estaría notificando.
+                            </p>
+
+                            <!-- Q4 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Mandan comprobante de pago?</p>
+                            <p class="faq-text">
+                                Sip, enviamos un comprobante en PDF de la compra a tu correo electrónico. Es importante que nos avises cada vez que realices algún pago para actualizar tu cuenta y si en un lapso de 48 horas no te ha llegado la actualización a tu correo por favor avísanos para revisar qué pasó y dar seguimiento.
+                            </p>
+
+                            <!-- Sub-bloque para Q5 y Q6 (Textos a la izquierda + Imagen a la derecha) -->
+                            <div class="row align-items-center mt-4">
+                                <div class="col-12 col-md-8 col-lg-9">
+                                    
+                                    <!-- Q5 -->
+                                    <p class="faq-text fw-bold mb-1">Mi figura pasó por Chernobyl y llegó deforme TwT</p>
+                                    <p class="faq-text mb-4">
+                                        En caso de que tu figura llegue con defectos de fabrica nos puedes avisar para contactar al fabricante y revisar si aplica o no para un cambio.
+                                    </p>
+
+                                    <!-- Q6 -->
+                                    <p class="faq-text fw-bold mb-1">La figura que quiero comprar dice que es ‘frágil’</p>
+                                    <p class="faq-text mb-0">
+                                        En cuanto a figuras de polyresina y materiales delicados nuestros proveedores nos piden mencionar que son un poco frágiles y aunque vienen bien protegidas no se hacen responsables si esta llegara a tener algún detalle o imperfecto ocasionados por un mal trato del servicio de paquetería o aduana.
+                                    </p>
+
+                                </div>
+                                
+                                <!-- Lado derecho: Imagen de Umi-Chan asustada -->
+                                <div class="col-12 col-md-4 col-lg-3 text-center mt-4 mt-md-0">
+                                    <!-- IMPORTANTE: Cambia la ruta por la de tu imagen real -->
+                                    <img src="img/faq/5.svg" alt="Umi-Chan Chernobyl" class="img-fluid faq-mascota">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ================= Bloque 7: Preguntas generales ================= -->
+                        <div class="faq-block mb-5">
+                            <h2 class="fw-bold mb-3">Preguntas generales</h2>
+                            <hr class="faq-divider">
+
+                            <!-- Q1 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿La venta puede ser por Mercado Libre?</p>
+                            <p class="faq-text">
+                                Sólo si se trata de productos que tenemos en stock y se te cobraría comisión.
+                            </p>
+
+                            <!-- Q2 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Tienen figuras en stock?</p>
+                            <p class="faq-text">
+                                En general las figuras que traemos son bajo pedido (nuevas y seminuevas), pero a veces nos damos el lujo de pedir algunas figuras extra o nos cancelan preventas de último momento que de alguna manera tienen que salir. <a href="#" class="text-fucsia text-decoration-none">Aquí</a> encontrarás lo que tenemos en stock a un costo accesible o con descuento.
+                            </p>
+
+                            <!-- Q3 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Tienen tienda física?</p>
+                            <p class="faq-text">
+                                Nos encantaría tener tienda física TwT pero por el momento nuestra ventas son en línea.
+                            </p>
+
+                            <!-- Q4 -->
+                            <p class="faq-text fw-bold mt-4 mb-1">¿Hacen envíos internacionales?</p>
+                            <p class="faq-text">
+                                No es algo usual, pero con tu código postal podemos cotizar el envío a tu país.
+                            </p>
+                        </div>
+
+                        <!-- ================= Bloque 8: Dudas ================= -->
+                        <div class="faq-block mb-5">
+                            <h2 class="fw-bold mb-3">Dudas</h2>
+                            <hr class="faq-divider">
+
+                            <p class="faq-text">
+                                Si tienes alguna duda o comentario referente a nuestro proceso de compra o términos y condiciones de servicio, puedes contactarnos en nuestras redes sociales o por correo electrónico.
+                            </p>
+
+                            <!-- Botón de Contáctanos -->
+                            <div class="text-center mt-5">
+                                <!-- IMPORTANTE: Ajusta el enlace "contacto.html" al nombre real de tu página de contacto -->
+                                <a href="#" class="btn-faq-contacto">Contáctanos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+                    
+    </main>
+
+    <!-- ========================================================================================
+                                            FOOTER
+    =========================================================================================-->
+    <footer class="footer-bg py-4 border-top border-dark">
+        <div class="container-fluid px-md-5">
+            
+            <div class="row align-items-center text-center">
+                
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <a href="index.html">
+                        <img src="img/logo2.png" alt="Logo Tienda" class="img-fluid footer-logo">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    
+                    <div class="footer-nav mb-2">
+                        <a href="index.html">Inicio</a> <span class="text-white mx-1">|</span>
+                        <a href="about.html">Acerca de</a> <span class="text-white mx-1">|</span>
+                        <a href="preguntas.html">FAQ</a> <span class="text-white mx-1">|</span>
+                        <a href="locales.html">Tiendas</a> <span class="text-white mx-1">|</span>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                    
+                    <div class="footer-legal">
+                        <p class="text-white mt-1 mb-0 copyright-text">© 2026 Tu Tienda. Todos los derechos reservados.</p>
+                        <p class="text-white mt-1 mb-0 copyright-text">
+                            Hecho con <i class="fa-solid fa-heart mx-1" style="color: #E10080;"></i> por 
+                            <!-- Cambia el link del href por tu URL real -->
+                            <a href="#" target="_blank" class="navito-link">NavitoSc</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="footer-social">
+                        <a href="#" class="footer-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/iniciador.js"></script>
+    <script src="js/preload.js"></script>
+</body>
+</html>

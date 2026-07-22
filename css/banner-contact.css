@@ -1,0 +1,32 @@
+/* ==================== MODIFICADORES PARA EL BANNER "CONTACTO" ==================== */
+
+/* 1. Imagen de fondo específica para Contacto (flores fucsias) */
+.categoria-banner.banner-contacto {
+    background-image: url('../img/contact/banner-contact.jpg'); /* Ajusta tu ruta */
+}
+
+/* 2. Tamaños de texto inmensos (Igual que en About) */
+.banner-contacto h1 {
+    font-size: 4.5rem; 
+    letter-spacing: 1px;
+}
+.banner-contacto p {
+    font-size: 2rem !important; 
+}
+
+/* ==================== RESPONSIVO PARA CONTACTO ==================== */
+@media (max-width: 768px) {
+    /* Permitimos que el banner crezca en celular */
+    .categoria-banner.banner-contacto {
+        height: auto; 
+        padding: 40px 15px; 
+    }
+    
+    /* Achicamos textos para celular */
+    .banner-contacto h1 {
+        font-size: 3rem; 
+    }
+    .banner-contacto p {
+        font-size: 1.5rem !important;
+    }
+}

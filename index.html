@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Store - Catálogo de Figuras</title>
+    <!-- Icono de la pestaña (Favicon) -->
+    <link rel="icon" type="image/png" href="img/logo2.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preload.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/tendencia.css">
+    <link rel="stylesheet" href="css/frabricante.css">
+    <link rel="stylesheet" href="css/preventa.css">
+    <link rel="stylesheet" href="css/anuncios.css">
+    <link rel="stylesheet" href="css/descuento.css">
+    <link rel="stylesheet" href="css/beneficios.css">
+    <link rel="stylesheet" href="css/resenas.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body class="no-scroll">
+
+    <!-- ==================== PANTALLA DE CARGA (VIDEO) ==================== -->
+    <div id="preloader">
+        <img src="img/preload.webp" class="custom-logo-loader">
+    </div>
+
+    <!-- ========================================================================================
+                                           HEADER
+     =========================================================================================--> 
+    <header class="sticky-top" style="z-index: 1050;">
+        <div class="top-header py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/logo.png" alt="Logo OtakuBazaar" class="img-fluid logo-img">
+                        </a>
+                    </div>
+
+                    <div class="col-md-4 mb-md-0 d-flex justify-content-center">
+                        <div class="search-bar position-relative w-100" style="max-width: 350px;">
+                            <input type="text" class="form-control rounded-pill border-0 py-2 ps-4 pe-5" placeholder="Texto a buscar...">
+                            <button type="submit" class="btn border-0 position-absolute end-0 top-0 h-100 pe-3 text-muted">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-none d-md-flex justify-content-md-end align-items-center">
+                        <div class="social-links d-flex gap-2">
+                            <a href="#" class="social-icon text-dark" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="TikTok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-nav-custom p-0" id="mainNavbar">
+            <div class="container-fluid px-0">
+                
+                <!-- 1. BOTÓN HAMBURGUESA: Cambiamos a data-bs-toggle="offcanvas" -->
+                <button class="navbar-toggler m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bottomNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 2. MENÚ LATERAL: Cambiamos 'offcanvas-end' por 'offcanvas-start' (Izquierda) -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="bottomNav">
+                    
+                    <!-- Cabecera del menú lateral (Sin título, solo la "X" alineada a la derecha) -->
+                    <div class="offcanvas-header justify-content-end">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                    </div>
+
+                    <!-- Cuerpo del menú -->
+                    <div class="offcanvas-body p-0 p-lg-2 justify-content-center">
+                        <ul class="navbar-nav gap-0 gap-lg-4 text-start text-lg-center w-100 justify-content-center">
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PREVENTA</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PELUCHES</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MANGAS Y REVISTAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">TCG</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MERCH VARIOS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS +18</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="preguntas.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="locales.html">TIENDAS</a></li>
+                        </ul>
+                        <div class="offcanvas-social d-flex justify-content-center gap-3 py-4 mt-auto">
+                            <a href="#" class="mobile-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================================================================
+                                            SLIDER
+        =========================================================================================--> 
+        <section class="hero-slider" id="inicio" data-aos="fade-in" data-aos-duration="1200">
+            <!-- El atributo data-bs-ride="carousel" hace que inicie solo -->
+            <div id="mainBannerSlider" class="carousel slide" data-bs-ride="carousel">
+                
+                <!-- Indicadores (Puntitos de paginación) -->
+                <div class="carousel-indicators custom-indicators">
+                    <button type="button" data-bs-target="#mainBannerSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#mainBannerSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#mainBannerSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <!-- Imágenes del Slider (Ahora con enlaces) -->
+                <div class="carousel-inner">
+                    
+                    <!-- Slide 1: Redirige a Preventas -->
+                    <div class="carousel-item active" data-bs-interval="8000">
+                        <a href="#preventas">
+                            <!-- Imagen para PC (Horizontal) -->
+                            <img src="img/banner/banner1.jpg" class="d-block w-100 d-none d-md-block" alt="Banner 1 Desktop">
+                            <!-- Imagen para Celular (Vertical - Tienes que crearla) -->
+                            <img src="img/banner/banner1-movil.png" class="d-block w-100 d-md-none" alt="Banner 1 Movil">
+                        </a>
+                    </div>
+                    
+                    <!-- Slide 2: Redirige a Figuras -->
+                    <div class="carousel-item" data-bs-interval="8000">
+                        <a href="#figuras">
+                            <!-- Imagen para PC (Horizontal) -->
+                            <img src="img/banner/banner2.webp" class="d-block w-100 d-none d-md-block" alt="Banner 2 Desktop">
+                            <!-- Imagen para Celular (Vertical) -->
+                            <img src="img/banner/banner2-movil.png" class="d-block w-100 d-md-none" alt="Banner 2 Movil">
+                        </a>
+                    </div>
+                    
+                    <!-- Slide 3: Redirige a Merch -->
+                    <div class="carousel-item" data-bs-interval="8000">
+                        <a href="#merch">
+                            <!-- Imagen para PC (Horizontal) -->
+                            <img src="img/banner/banner3.jpg" class="d-block w-100 d-none d-md-block" alt="Banner 3 Desktop">
+                            <!-- Imagen para Celular (Vertical) -->
+                            <img src="img/banner/banner3-movil.png" class="d-block w-100 d-md-none" alt="Banner 3 Movil">
+                        </a>
+                    </div>
+                    
+                </div>
+                <!-- Controles laterales (Flechas) - Son opcionales pero recomendables para el usuario -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainBannerSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainBannerSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                            TENDENCIA
+        =========================================================================================-->
+        <section class="py-5" id="tendencias">
+            <div class="tendencia-title-bg mb-5 py-3" data-aos="fade-right" data-aos-duration="800">
+                <div class="container">
+                    <h3 class="fw-bold mb-0 text-white">TENDENCIAS 🔥</h3>
+                </div>
+            </div>
+            
+            <div class="container">
+                
+                <!--  VISTA COMPUTADORA Y TABLET (Tu cuadrícula original intacta) -->
+                <div class="row g-4 d-none d-md-flex">
+                    <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <a href="tienda.html" class="tendencia-link d-block text-decoration-none">
+                            <div class="tendencia-card">
+                                <img src="img/tendencia/1.webp" alt="Jujutsu Kaisen" class="img-fluid w-100">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <a href="tienda.html" class="tendencia-link d-block text-decoration-none">
+                            <div class="tendencia-card">
+                                <img src="img/tendencia/2.webp" alt="Frieren" class="img-fluid w-100">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <a href="tienda.html" class="tendencia-link d-block text-decoration-none">
+                            <div class="tendencia-card">
+                                <img src="img/tendencia/3.webp" alt="Overlord" class="img-fluid w-100">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                        <a href="tienda.html" class="tendencia-link d-block text-decoration-none">
+                            <div class="tendencia-card">
+                                <img src="img/tendencia/4.webp" alt="Bishoujo" class="img-fluid w-100">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!--  VISTA MÓVIL (Slider automático cada 5 segundos) -->
+                <div id="sliderTendenciasMobile" class="carousel slide d-block d-md-none" data-bs-ride="carousel" data-aos="fade-up">
+                    
+                    <!-- Indicadores (puntitos) -->
+                    <div class="carousel-indicators" style="bottom: -35px;">
+                        <button type="button" data-bs-target="#sliderTendenciasMobile" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#sliderTendenciasMobile" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#sliderTendenciasMobile" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#sliderTendenciasMobile" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+
+                    <!-- Añadimos px-4 para dar un margen lateral y evitar que las flechas tapen la imagen -->
+                    <div class="carousel-inner px-4 py-3">
+                        
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active" data-bs-interval="5000">
+                            <!-- ¡NUEVO!: Añadimos px-2 para crear una separación lateral entre las imágenes -->
+                            <a href="tienda.html" class="tendencia-link d-block text-decoration-none mx-auto w-100 px-2">
+                                <div class="tendencia-card">
+                                    <img src="img/tendencia/1.webp" alt="Jujutsu Kaisen" class="img-fluid w-100">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <a href="tienda.html" class="tendencia-link d-block text-decoration-none mx-auto w-100 px-2">
+                                <div class="tendencia-card">
+                                    <img src="img/tendencia/2.webp" alt="Frieren" class="img-fluid w-100">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <a href="tienda.html" class="tendencia-link d-block text-decoration-none mx-auto w-100 px-2">
+                                <div class="tendencia-card">
+                                    <img src="img/tendencia/3.webp" alt="Overlord" class="img-fluid w-100">
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="carousel-item" data-bs-interval="5000">
+                            <a href="tienda.html" class="tendencia-link d-block text-decoration-none mx-auto w-100 px-2">
+                                <div class="tendencia-card">
+                                    <img src="img/tendencia/4.webp" alt="Bishoujo" class="img-fluid w-100">
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Flechas de navegación (Usando Font Awesome en color fucsia) -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#sliderTendenciasMobile" data-bs-slide="prev" style="width: 10%;">
+                        <i class="fa-solid fa-chevron-left" style="color: #FF0062; font-size: 2rem;"></i>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#sliderTendenciasMobile" data-bs-slide="next" style="width: 10%;">
+                        <i class="fa-solid fa-chevron-right" style="color: #FF0062; font-size: 2rem;"></i>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                            FABRICANTE
+        =========================================================================================-->
+        <section id="fabricantes">
+            <div class="container py-5 fabricante">
+                
+                <div class="fabricantes-header d-flex align-items-center justify-content-center mb-5" data-aos="zoom-in" data-aos-duration="800">
+                    <span class="line-divider"></span>
+                    <h3 class="fw-bold mb-0 mx-4">FABRICANTES</h3>
+                    <span class="line-divider"></span>
+                </div>
+                
+                <!-- ÚNICO CONTENEDOR: Swiper se encargará de la magia -->
+                <!-- px-4 da espacio lateral para las flechas en celular -->
+                <div class="swiper swiperFabricantes px-4 px-md-0" data-aos="fade-up" data-aos-delay="150">
+                    <div class="swiper-wrapper text-center">
+                        
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="fabricante-item mx-auto">
+                                <div class="fabricante-logo mb-3">
+                                    <img src="img/fabricante/1.png" alt="Figuarts ZERO" class="img-fluid">
+                                </div>
+                                <h5 class="fw-bold mb-2">Figuarts ZERO</h5>
+                                <p class="text-muted-custom">Figuras Figuarts ZERO, gran detalle y acabado para fans de anime.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="fabricante-item mx-auto">
+                                <div class="fabricante-logo mb-3">
+                                    <img src="img/fabricante/2.png" alt="P.O.P One Piece" class="img-fluid">
+                                </div>
+                                <h5 class="fw-bold mb-2">P.O.P One Piece</h5>
+                                <p class="text-muted-custom">Figuras P.O.P One Piece oficiales de MegaHouse de importación.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="fabricante-item mx-auto">
+                                <div class="fabricante-logo mb-3">
+                                    <img src="img/fabricante/3.png" alt="Pop Up Parade" class="img-fluid">
+                                </div>
+                                <h5 class="fw-bold mb-2">Pop Up Parade</h5>
+                                <p class="text-muted-custom">Figuras Pop Up Parade, calidad y precio de Good Smile Company.</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="fabricante-item mx-auto">
+                                <div class="fabricante-logo mb-3">
+                                    <img src="img/fabricante/4.png" alt="Ichibansho" class="img-fluid">
+                                </div>
+                                <h5 class="fw-bold mb-2">Ichibansho</h5>
+                                <p class="text-muted-custom">Figuras Ichibansho de Bandai Spirits y sorteos Ichiban Kuji.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Paginación y Flechas (Ocultas en PC con d-md-none) -->
+                    <div class="swiper-pagination d-md-none"></div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                            PREVENTA
+        =========================================================================================-->
+        <section class="py-5 bg-white" id="preventa">
+            <div class="preventa-title-bg mb-5 py-3" data-aos="fade-right" data-aos-duration="800">
+                <div class="container">
+                    <h3 class="fw-bold mb-0 text-white">PREVENTA 🕒</h3>
+                </div>
+            </div>
+            
+            <div class="container">
+                
+                <!-- CONTENEDOR SWIPER -->
+                <div class="swiper swiperPreventa px-4 px-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Producto 1 -->
+                        <div class="swiper-slide">
+                            <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                <div class="product-card">
+                                    <div class="product-img-container mb-3 position-relative">
+                                        <img src="img/productos/1.jpg" alt="Umamusume" class="img-fluid w-100 img-main">
+                                        <img src="img/productos/2.webp" alt="Umamusume Reverso" class="img-fluid w-100 img-hover">
+                                    </div>
+                                    <h6 class="product-title mb-2">Banpresto - One Piece - The Trafalgar Law -Wanokuni- Figura de Rey del Artista</h6>
+                                    <div class="product-price">
+                                        <span class="price-number">S/59.90</span> <span class="price-currency">PEN</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Producto 2 -->
+                        <div class="swiper-slide">
+                            <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                <div class="product-card">
+                                    <div class="product-img-container mb-3 position-relative">
+                                        <img src="img/productos/1.jpg" alt="Umamusume" class="img-fluid w-100 img-main">
+                                        <img src="img/productos/2.webp" alt="Umamusume Reverso" class="img-fluid w-100 img-hover">
+                                    </div>
+                                    <h6 class="product-title mb-2">Banpresto - One Piece - The Trafalgar Law -Wanokuni- Figura de Rey del Artista</h6>
+                                    <div class="product-price">
+                                        <span class="price-number">S/59.90</span> <span class="price-currency">PEN</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Producto 3 -->
+                        <div class="swiper-slide">
+                            <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                <div class="product-card">
+                                    <div class="product-img-container mb-3 position-relative">
+                                        <img src="img/productos/1.jpg" alt="Umamusume" class="img-fluid w-100 img-main">
+                                        <img src="img/productos/2.webp" alt="Umamusume Reverso" class="img-fluid w-100 img-hover">
+                                    </div>
+                                    <h6 class="product-title mb-2">Banpresto - One Piece - The Trafalgar Law -Wanokuni- Figura de Rey del Artista</h6>
+                                    <div class="product-price">
+                                        <span class="price-number">S/59.90</span> <span class="price-currency">PEN</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Producto 4 -->
+                        <div class="swiper-slide">
+                            <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                <div class="product-card">
+                                    <div class="product-img-container mb-3 position-relative">
+                                        <img src="img/productos/1.jpg" alt="Umamusume" class="img-fluid w-100 img-main">
+                                        <img src="img/productos/2.webp" alt="Umamusume Reverso" class="img-fluid w-100 img-hover">
+                                    </div>
+                                    <h6 class="product-title mb-2">Banpresto - One Piece - The Trafalgar Law -Wanokuni- Figura de Rey del Artista</h6>
+                                    <div class="product-price">
+                                        <span class="price-number">S/59.90</span> <span class="price-currency">PEN</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Paginación (Puntitos solo para celular) -->
+                    <div class="swiper-pagination d-md-none"></div>
+                </div>
+                <!-- FIN CONTENEDOR SWIPER -->
+
+                <div class="text-end mt-5 mb-2" data-aos="fade-left" data-aos-delay="100"> 
+                    <a href="tienda.html" class="btn btn-ver-mas">
+                        Ver más <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                            ANUNCIOS
+        =========================================================================================-->
+        <section id="anuncios">
+            <!-- Usamos container-fluid para que ocupe más ancho en la pantalla -->
+            <div class="container-fluid px-md-5">
+                
+                <!-- Contenedor principal de Swiper -->
+                <div class="swiper sliderAnuncios" data-aos="zoom-in" data-aos-duration="1000">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Anuncio 1 -->
+                        <div class="swiper-slide">
+                            <a href="tienda.html">
+                                <!-- Imagen para PC (Oculta en móviles) -->
+                                <img src="img/anuncio/1.jpg" alt="Anuncio Pokemon PC" class="img-fluid w-100 banner-anuncio d-none d-md-block">
+                                <!-- Imagen para Móvil (Oculta en PC) -->
+                                <img src="img/anuncio/1-movil.png" alt="Anuncio Pokemon Movil" class="img-fluid w-100 banner-anuncio d-block d-md-none">
+                            </a>
+                        </div>
+                        
+                        <!-- Anuncio 2 -->
+                        <div class="swiper-slide">
+                            <a href="tienda.html">
+                                <!-- Imagen para PC -->
+                                <img src="img/anuncio/2.jpg" alt="Anuncio Catan PC" class="img-fluid w-100 banner-anuncio d-none d-md-block">
+                                <!-- Imagen para Móvil -->
+                                <img src="img/anuncio/4-movil.png" alt="Anuncio Catan Movil" class="img-fluid w-100 banner-anuncio d-block d-md-none">
+                            </a>
+                        </div>
+                        
+                        <!-- Anuncio 3 -->
+                        <div class="swiper-slide">
+                            <a href="tienda.html">
+                                <!-- Imagen para PC -->
+                                <img src="img/anuncio/3.jpg" alt="Anuncio Gundam PC" class="img-fluid w-100 banner-anuncio d-none d-md-block">
+                                <!-- Imagen para Móvil -->
+                                <img src="img/anuncio/5-movil.png" alt="Anuncio Gundam Movil" class="img-fluid w-100 banner-anuncio d-block d-md-none">
+                            </a>
+                        </div>
+
+                        <!-- Anuncio 4 -->
+                        <div class="swiper-slide">
+                            <a href="tienda.html">
+                                <!-- Imagen para PC -->
+                                <img src="img/anuncio/4.jpg" alt="Anuncio Ofertas PC" class="img-fluid w-100 banner-anuncio d-none d-md-block">
+                                <!-- Imagen para Móvil -->
+                                <img src="img/anuncio/6-movil.png" alt="Anuncio Ofertas Movil" class="img-fluid w-100 banner-anuncio d-block d-md-none">
+                            </a>
+                        </div>
+
+                        <!-- Anuncio 5 -->
+                        <div class="swiper-slide">
+                            <a href="tienda.html">
+                                <!-- Imagen para PC -->
+                                <img src="img/anuncio/5.jpg" alt="Anuncio Ofertas 5 PC" class="img-fluid w-100 banner-anuncio d-none d-md-block">
+                                <!-- Imagen para Móvil -->
+                                <img src="img/anuncio/4-movil.png" alt="Anuncio Ofertas 5 Movil" class="img-fluid w-100 banner-anuncio d-block d-md-none">
+                            </a>
+                        </div>
+
+                        <!-- Anuncio 6 -->
+                        <div class="swiper-slide">
+                            <a href="tienda.html">
+                                <!-- Imagen para PC -->
+                                <img src="img/anuncio/6.jpg" alt="Anuncio Ofertas 6 PC" class="img-fluid w-100 banner-anuncio d-none d-md-block">
+                                <!-- Imagen para Móvil -->
+                                <img src="img/anuncio/5-movil.png" alt="Anuncio Ofertas 6 Movil" class="img-fluid w-100 banner-anuncio d-block d-md-none">
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Flechas de navegación -->
+                    <div class="swiper-button-next custom-arrow"></div>
+                    <div class="swiper-button-prev custom-arrow"></div>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                            DESCUENTO
+        =========================================================================================-->
+        <section class="py-5 bg-white" id="descuentos">
+            
+            <!-- Título con imagen de fondo (Banner) -->
+            <div class="descuentos-title-bg mb-5 py-3" data-aos="fade-right" data-aos-duration="800">
+                <div class="container">
+                    <h3 class="fw-bold mb-0 text-white">DESCUENTOS 💸</h3>
+                </div>
+            </div>
+            
+            <div class="container">
+                
+                <!-- CONTENEDOR SWIPER DESCUENTOS -->
+                <div class="swiper swiperDescuentos px-4 px-md-0" data-aos="fade-up" data-aos-delay="200">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Oferta 1 -->
+                        <div class="swiper-slide">
+                            <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                <div class="product-card">
+                                    <div class="product-img-container mb-3 position-relative">
+                                        <span class="discount-badge">¡Oferta!</span>
+                                        <img src="img/productos/1.jpg" alt="Figura Oferta" class="img-fluid w-100 img-main">
+                                        <img src="img/productos/2.webp" alt="Reverso" class="img-fluid w-100 img-hover">
+                                    </div>
+                                    <h6 class="product-title mb-2">Demon Slayer - Kamado Tanjirou 1/8</h6>
+                                    <div class="price-container-sale">
+                                        <span class="price-old">S/59.90</span>
+                                        <div>
+                                            <span class="price-new">S/35.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Oferta 2 -->
+                        <div class="swiper-slide">
+                            <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                <div class="product-card">
+                                    <div class="product-img-container mb-3 position-relative">
+                                        <span class="discount-badge">¡Oferta!</span>
+                                        <img src="img/productos/1.jpg" alt="Figura Oferta" class="img-fluid w-100 img-main">
+                                        <img src="img/productos/2.webp" alt="Reverso" class="img-fluid w-100 img-hover">
+                                    </div>
+                                    <h6 class="product-title mb-2">Demon Slayer - Kamado Tanjirou 1/8</h6>
+                                    <div class="price-container-sale">
+                                        <span class="price-old">S/59.90</span>
+                                        <div>
+                                            <span class="price-new">S/35.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Oferta 3 -->
+                        <div class="swiper-slide">
+                            <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                <div class="product-card">
+                                    <div class="product-img-container mb-3 position-relative">
+                                        <span class="discount-badge">¡Oferta!</span>
+                                        <img src="img/productos/1.jpg" alt="Figura Oferta" class="img-fluid w-100 img-main">
+                                        <img src="img/productos/2.webp" alt="Reverso" class="img-fluid w-100 img-hover">
+                                    </div>
+                                    <h6 class="product-title mb-2">Demon Slayer - Kamado Tanjirou 1/8</h6>
+                                    <div class="price-container-sale">
+                                        <span class="price-old">S/59.90</span>
+                                        <div>
+                                            <span class="price-new">S/35.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- Oferta 4 -->
+                        <div class="swiper-slide">
+                            <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                <div class="product-card">
+                                    <div class="product-img-container mb-3 position-relative">
+                                        <span class="discount-badge">¡Oferta!</span>
+                                        <img src="img/productos/1.jpg" alt="Figura Oferta" class="img-fluid w-100 img-main">
+                                        <img src="img/productos/2.webp" alt="Reverso" class="img-fluid w-100 img-hover">
+                                    </div>
+                                    <h6 class="product-title mb-2">Demon Slayer - Kamado Tanjirou 1/8</h6>
+                                    <div class="price-container-sale">
+                                        <span class="price-old">S/59.90</span>
+                                        <div>
+                                            <span class="price-new">S/35.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Paginación (Puntitos solo para celular) -->
+                    <div class="swiper-pagination d-md-none"></div>
+                </div>
+                <!-- FIN CONTENEDOR SWIPER -->
+
+                <!-- Botón Ver más Ofertas -->
+                <div class="text-end mt-5 mb-2" data-aos="fade-left" data-aos-delay="100">
+                    <a href="tienda.html" class="btn btn-ver-mas">
+                        Ver más <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                            BENEFICIOS
+        =========================================================================================-->
+        <section class="pb-5" id="beneficios">
+            <div class="container">
+                
+                <div class="row g-3 g-lg-4">
+                    
+                    <div class="col-12 col-md-4" data-aos="zoom-in-up" data-aos-delay="100">
+                        <a href="preguntas.html" class="d-block beneficio-link">
+                            <div class="beneficio-card">
+                                <img src="img/beneficios/1.jpg" alt="Beneficio Preventas" class="img-fluid w-100 beneficio-img">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-4" data-aos="zoom-in-up" data-aos-delay="200">
+                        <a href="preguntas.html" class="d-block beneficio-link">
+                            <div class="beneficio-card">
+                                <img src="img/beneficios/2.jpg" alt="Beneficio Pedidos" class="img-fluid w-100 beneficio-img">
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-12 col-md-4" data-aos="zoom-in-up" data-aos-delay="300">
+                        <a href="preguntas.html" class="d-block beneficio-link">
+                            <div class="beneficio-card">
+                                <img src="img/beneficios/3.jpg" alt="Beneficio Envíos" class="img-fluid w-100 beneficio-img">
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                            RESEÑAS
+        =========================================================================================-->
+        <section class="py-5 resenas-bg" id="resenas">
+            <div class="container">
+                
+                <div class="resenas-header d-flex align-items-center justify-content-center mb-5" data-aos="fade-down">
+                    <span class="line-divider"></span>
+                    <h3 class="fw-bold mb-0 mx-4 text-dark">RESEÑAS DE CLIENTES</h3>
+                    <span class="line-divider"></span>
+                </div>
+                
+                <div class="swiper sliderResenas" data-aos="zoom-in-up" data-aos-delay="150">
+                    <div class="swiper-wrapper">
+                        
+                        <div class="swiper-slide">
+                            <div class="resena-card">
+                                <img src="img/reseñas/1.webp" alt="Reseña WhatsApp 1" class="img-fluid resena-img img-lightbox">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="resena-card">
+                                <img src="img/reseñas/2.webp" alt="Reseña WhatsApp 2" class="img-fluid resena-img img-lightbox">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="resena-card">
+                                <img src="img/reseñas/3.webp" alt="Reseña WhatsApp 3" class="img-fluid resena-img img-lightbox">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="resena-card">
+                                <img src="img/reseñas/4.webp" alt="Reseña WhatsApp 4" class="img-fluid resena-img img-lightbox">
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="resena-card">
+                                <img src="img/reseñas/1.webp" alt="Reseña WhatsApp 5" class="img-fluid resena-img img-lightbox">
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="swiper-pagination resenas-pagination"></div>
+                </div>
+                <!-- ==================== BOTÓN INSTAGRAM ==================== -->
+                <div class="text-center mt-5 pt-2 mb-2" data-aos="flip-up" data-aos-delay="250">
+                    <!-- Recuerda cambiar el href por el link real de tu Instagram -->
+                    <a href="https://instagram.com/tutienda" target="_blank" class="btn btn-instagram">
+                        Ver más en Instagram <i class="fa-brands fa-instagram ms-2 fs-5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================================================
+                                            FOOTER
+    =========================================================================================-->
+    <footer class="footer-bg py-4 border-top border-dark">
+        <div class="container-fluid px-md-5">
+            
+            <div class="row align-items-center text-center">
+                
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <a href="index.html">
+                        <img src="img/logo2.png" alt="Logo Tienda" class="img-fluid footer-logo">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    
+                    <div class="footer-nav mb-2">
+                        <a href="index.html">Inicio</a> <span class="text-white mx-1">|</span>
+                        <a href="about.html">Acerca de</a> <span class="text-white mx-1">|</span>
+                        <a href="preguntas.html">FAQ</a> <span class="text-white mx-1">|</span>
+                        <a href="locales.html">Tiendas</a> <span class="text-white mx-1">|</span>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                    
+                    <div class="footer-legal">
+                        <p class="text-white mt-1 mb-0 copyright-text">© 2026 Tu Tienda. Todos los derechos reservados.</p>
+                        <p class="text-white mt-1 mb-0 copyright-text">
+                            Hecho con <i class="fa-solid fa-heart mx-1" style="color: #E10080;"></i> por 
+                            <!-- Cambia el link del href por tu URL real -->
+                            <a href="#" target="_blank" class="navito-link">NavitoSc</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="footer-social">
+                        <a href="#" class="footer-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================================================
+                                        MODAL RESEÑAS
+    =========================================================================================-->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0 shadow-none">
+                
+                <div class="modal-header border-0 p-0 justify-content-end mb-2">
+                    <button type="button" class="btn-close fs-4" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                
+                <div class="modal-body p-0 text-center">
+                    <img src="" id="lightboxImage" class="img-fluid rounded" alt="Reseña Ampliada" style="max-height: 85vh; object-fit: contain;">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/iniciador.js"></script>
+    <script src="js/preload.js"></script>
+    <script src="js/anuncios.js"></script>
+    <script src="js/resenas.js"></script>
+    <script src="js/swiper-movil.js"></script>
+</body>
+</html>

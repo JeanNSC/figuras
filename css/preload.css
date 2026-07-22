@@ -1,0 +1,35 @@
+/* ==================== PANTALLA DE CARGA ==================== */
+
+/* Bloquea el scroll de toda la página */
+body.no-scroll {
+    overflow: hidden !important;
+    height: 100vh !important; /* Fija la altura exacta de la pantalla */
+    touch-action: none !important; /* Apaga el arrastre táctil en celulares */
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* <-- Cambiar 100% por 100vw (Viewport Width) */
+    height: 100vh; /* <-- Cambiar 100% por 100vh (Viewport Height) */
+    background-color: #181B29; 
+    z-index: 99999; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Controla el tamaño de tu logo animado WebP */
+.custom-logo-loader {
+    width: 450px; /* <-- Aumentamos el tamaño de 300px a 450px */
+    max-width: 90vw; /* <-- Protege que no se corte en pantallas de celular muy estrechas */
+    height: auto;
+}
+
+/* Clase para ocultarlo */
+.preloader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}

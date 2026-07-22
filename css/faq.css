@@ -1,0 +1,58 @@
+/* ==================== SECCIÓN CUERPO FAQ ==================== */
+
+/* Línea sólida negra debajo de los títulos */
+.faq-divider {
+    border: none;
+    border-top: 3px solid #000000;
+    opacity: 1; /* Forzamos el negro puro */
+    margin-bottom: 25px;
+}
+
+/* Estilos de los párrafos para lectura cómoda */
+.faq-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+/* Color para resaltar palabras clave (redes sociales, darkoins, etc.) */
+.text-fucsia {
+    color: #FF0062;
+    /* font-weight: 500; (Opcional: Descomenta esto si quieres que el texto rosa sea un poquito más grueso) */
+}
+
+/* Tamaño controlado para las mascotas de las FAQ */
+.faq-mascota {
+    max-width: 180px; /* Evita que la imagen se haga gigante en pantallas grandes */
+    height: auto;
+}
+
+/* ==================== RESPONSIVO PARA FAQ ==================== */
+@media (max-width: 768px) {
+    /* En celulares, separamos un poco la imagen del texto que queda arriba */
+    .faq-mascota {
+        margin-top: 20px;
+        max-width: 200px; 
+    }
+}
+
+/* ==================== BOTÓN FAQ (CONTÁCTANOS) ==================== */
+
+.btn-faq-contacto {
+    display: inline-block;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 15px 45px; /* Espaciado interno para hacerlo grande y llamativo */
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px; /* Bordes ligeramente redondeados como en tu imagen */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto al pasar el cursor (Hover) */
+.btn-faq-contacto:hover {
+    background-color: #FF0062; /* Cambia a fucsia */
+    color: #ffffff; /* Aseguramos que el texto siga blanco */
+    transform: translateY(-3px); /* Pequeño salto hacia arriba */
+}

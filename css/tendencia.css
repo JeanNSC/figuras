@@ -1,0 +1,74 @@
+/* ==================== ESTILOS SECCIÓN TENDENCIAS ==================== */
+
+.tendencia-title-bg {
+    width: 100%; /* Asegura que cubra de lado a lado */
+    
+    /* El linear-gradient es opcional si tu imagen ya es oscura */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../img/banner.jpg') no-repeat center center;
+    background-size: cover;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.tendencia-title-bg h3 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.tendencia-card {
+    border-radius: 15px; /* Bordes redondeados idénticos a los de tu imagen */
+    overflow: hidden; /* Evita que la imagen se salga del borde redondeado al hacer zoom */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra base para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bg-card);
+}
+
+/* Estado normal de la imagen */
+.tendencia-card img {
+    transition: transform 0.4s ease; /* Transición suave para el zoom */
+    object-fit: cover;
+    display: block; /* Elimina espacios residuales debajo de las imágenes */
+}
+
+/* Efectos al hacer HOVER sobre el enlace completo */
+.tendencia-link:hover .tendencia-card {
+    transform: translateY(-8px); /* La tarjeta se eleva 8px */
+    /* Sombra con un sutil brillo usando tu color fucsia para seguir la temática */
+    box-shadow: 0 12px 25px rgba(225, 0, 128, 0.3); 
+}
+
+.tendencia-link:hover .tendencia-card img {
+    transform: scale(1.05); /* Efecto de zoom sutil dentro de la tarjeta */
+}
+
+/* ==================== AJUSTE SLIDER MÓVIL ==================== */
+
+/* Permite que la sombra de la tarjeta no se corte por los bordes del slider */
+#sliderTendenciasMobile .carousel-inner {
+    overflow: visible;
+}
+
+#sliderTendenciasMobile {
+    overflow: hidden; /* Mantiene el corte de las imágenes fuera de pantalla al nivel principal */
+    padding-bottom: 40px; /* Da espacio a los puntitos indicadores */
+}
+
+/* Oscurecemos los puntitos de Bootstrap para que resalten sobre tu fondo blanco */
+#sliderTendenciasMobile .carousel-indicators [data-bs-target] {
+    background-color: #181b29;
+    opacity: 0.3;
+}
+#sliderTendenciasMobile .carousel-indicators .active {
+    background-color: #FF0062; /* El puntito activo será fucsia */
+    opacity: 1;
+}
+
+#sliderTendenciasMobile .tendencia-card {
+    box-shadow: none !important;
+}
+
+/* Quitamos la sombra fucsia y el "saltito" al tocar la imagen con el dedo */
+#sliderTendenciasMobile .tendencia-link:hover .tendencia-card,
+#sliderTendenciasMobile .tendencia-link:active .tendencia-card {
+    box-shadow: none !important;
+    transform: none !important; 
+}

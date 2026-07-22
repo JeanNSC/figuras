@@ -1,0 +1,38 @@
+/* ==================== SECCIÓN DE BENEFICIOS (SKILLS) ==================== */
+
+/* Contenedor circular verde menta para los íconos */
+.skill-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background-color: #27FF93; /* Verde menta extraído de tu imagen */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Control del tamaño y color del ícono SVG */
+.skill-icon-wrapper svg {
+    width: 32px;
+    height: 32px;
+    color: #111827; /* Azul muy oscuro/casi negro */
+}
+
+/* Efecto hover: El ícono "salta" ligeramente y brilla al pasar el mouse */
+.skill-icon-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(110, 227, 180, 0.5);
+}
+
+/* Estilos de los textos */
+.skill-title {
+    color: #111827; /* Mismo tono oscuro del ícono */
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.skill-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}

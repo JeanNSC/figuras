@@ -1,0 +1,83 @@
+/* ==================== TÍTULO DESCUENTOS (BANNER) ==================== */
+
+.descuentos-title-bg {
+    width: 100%;
+    /* Pon aquí una URL diferente para el fondo de ofertas (ej. algo más rojo o llamativo) */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), 
+                url('../img/banner.jpg') no-repeat center center;
+    background-size: cover;
+    
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.descuentos-title-bg h3 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+}
+
+/* ==================== ETIQUETA DE DESCUENTO (BADGE) ==================== */
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #27FF93; /* El fucsia resalta perfecto de urgencia */
+    color: #111;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    z-index: 10; /* Obliga a la etiqueta a estar SIEMPRE por encima de la imagen secundaria al hacer hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ==================== PRECIOS EN DESCUENTO ==================== */
+
+.price-container-sale {
+    display: flex;
+    align-items: baseline; /* Alinea los números por la base */
+    gap: 10px; /* Separación entre precio viejo y nuevo */
+    flex-wrap: wrap; /* Evita que se rompa en pantallas muy pequeñas */
+}
+
+/* Precio Original Tachado */
+.price-container-sale .price-old {
+    font-size: 0.95rem;
+    color: #999999;
+    text-decoration: line-through; /* Crea la raya que tacha el número */
+    font-weight: 500;
+}
+
+/* Precio en Oferta (Más grande y llamativo) */
+.price-container-sale .price-new {
+    font-size: 1.45rem; /* Superior a los 1.3rem del precio normal */
+    font-weight: 700;
+    color: #E10080; /* Mantiene la identidad visual */
+}
+
+/* ==================== ESTILOS SWIPER DESCUENTOS ==================== */
+
+.swiperDescuentos {
+    padding-bottom: 75px !important; /* El mismo respiro amplio de la sección Preventa */
+    --swiper-pagination-color: #E10080; 
+}
+
+.swiperDescuentos .swiper-pagination {
+    bottom: 0 !important; 
+}
+
+/* Puntitos inactivos */
+.swiperDescuentos .swiper-pagination-bullet {
+    background-color: #bbbbbb; 
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important;
+    transition: all 0.3s ease;
+}
+
+/* Puntito activo */
+.swiperDescuentos .swiper-pagination-bullet-active {
+    background-color: #E10080; /* Fucsia para mantener la coherencia visual de tu tienda */
+    transform: scale(1.3);
+}

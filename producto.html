@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Store - Producto</title>
+    <!-- Icono de la pestaña (Favicon) -->
+    <link rel="icon" type="image/png" href="img/logo2.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preload.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/producto-slider.css">
+    <link rel="stylesheet" href="css/tienda-cuerpo.css">
+    <link rel="stylesheet" href="css/producto-cuerpo.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body class="no-scroll">
+
+    <!-- ==================== PANTALLA DE CARGA (VIDEO) ==================== -->
+    <div id="preloader">
+        <img src="img/preload.webp" class="custom-logo-loader">
+    </div>
+
+    <!-- ========================================================================================
+                                           HEADER
+     =========================================================================================--> 
+    <header class="sticky-top" style="z-index: 1050;">
+        <div class="top-header py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/logo.png" alt="Logo OtakuBazaar" class="img-fluid logo-img">
+                        </a>
+                    </div>
+
+                    <div class="col-md-4 mb-md-0 d-flex justify-content-center">
+                        <div class="search-bar position-relative w-100" style="max-width: 350px;">
+                            <input type="text" class="form-control rounded-pill border-0 py-2 ps-4 pe-5" placeholder="Texto a buscar...">
+                            <button type="submit" class="btn border-0 position-absolute end-0 top-0 h-100 pe-3 text-muted">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-none d-md-flex justify-content-md-end align-items-center">
+                        <div class="social-links d-flex gap-2">
+                            <a href="#" class="social-icon text-dark" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="TikTok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-nav-custom p-0" id="mainNavbar">
+            <div class="container-fluid px-0">
+                
+                <!-- 1. BOTÓN HAMBURGUESA: Cambiamos a data-bs-toggle="offcanvas" -->
+                <button class="navbar-toggler m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bottomNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 2. MENÚ LATERAL: Cambiamos 'offcanvas-end' por 'offcanvas-start' (Izquierda) -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="bottomNav">
+                    
+                    <!-- Cabecera del menú lateral (Sin título, solo la "X" alineada a la derecha) -->
+                    <div class="offcanvas-header justify-content-end">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                    </div>
+
+                    <!-- Cuerpo del menú -->
+                    <div class="offcanvas-body p-0 p-lg-2 justify-content-center">
+                        <ul class="navbar-nav gap-0 gap-lg-4 text-start text-lg-center w-100 justify-content-center">
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PREVENTA</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PELUCHES</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MANGAS Y REVISTAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">TCG</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MERCH VARIOS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS +18</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="preguntas.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="locales.html">TIENDAS</a></li>
+                        </ul>
+                        <div class="offcanvas-social d-flex justify-content-center gap-3 py-4 mt-auto">
+                            <a href="#" class="mobile-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================================================================
+                                SECCIÓN PRODUCTO - SLIDER (SOLO IMÁGENES)
+        =========================================================================================--> 
+        <section id="producto-slider" class="pt-3 bg-white">
+            <!-- px-0 en celular para que toque los bordes, px-md-3 en PC para dar un ligero margen -->
+            <div class="container-fluid px-0 px-md-3"> 
+                
+                <!-- Inicia Swiper -->
+                <div class="swiper myProductoSlider">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide slide-simple">
+                            <a href="tienda.html"><img src="img/productos/slider-promocion/1.jpg" alt="Banner 1" class="img-fluid w-100"></a>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide slide-simple">
+                            <a href="tienda.html"><img src="img/productos/slider-promocion/2.jpg" alt="Banner 2" class="img-fluid w-100"></a>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide slide-simple">
+                            <a href="tienda.html"><img src="img/productos/slider-promocion/3.jpg" alt="Banner 3" class="img-fluid w-100"></a>
+                        </div>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide slide-simple">
+                            <a href="tienda.html"><img src="img/productos/slider-promocion/4.jpg" alt="Banner 4" class="img-fluid w-100"></a>
+                        </div>
+
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide slide-simple">
+                            <a href="tienda.html"><img src="img/productos/slider-promocion/5.jpg" alt="Banner 5" class="img-fluid w-100"></a>
+                        </div>
+
+                        <!-- Slide 6 -->
+                        <div class="swiper-slide slide-simple">
+                            <a href="tienda.html"><img src="img/productos/slider-promocion/6.jpg" alt="Banner 5" class="img-fluid w-100"></a>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Puntos de navegación (Dots) por debajo -->
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                        CUERPO PRODUCTO
+        =========================================================================================--> 
+        <section class="py-5 bg-white" id="catalogo-tienda">
+            <div class="container-fluid px-md-5">
+               <div class="row g-4">     
+                    <!-- ==================== LADO IZQUIERDO: SIDEBAR / REDES ==================== -->
+                    <!-- Cambiamos a order-lg-1 para que en computadora salga a la izquierda -->
+                    <div class="col-lg-2 order-2 order-lg-1 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="sidebar-tienda sticky-lg-top" style="top: 100px;">
+                            
+                            <!-- Banners Pequeños Apilados -->
+                            <a href="preguntas.html" class="sidebar-img-link mb-3"><img src="img/beneficios/4.jpg" alt="Compra segura" class="img-fluid w-100 rounded"></a>
+                            <a href="preguntas.html" class="sidebar-img-link mb-3"><img src="img/beneficios/5.jpg" alt="Envios" class="img-fluid w-100 rounded"></a>
+                            <a href="preguntas.html" class="sidebar-img-link mb-3"><img src="img/beneficios/6.jpg" alt="Preventas" class="img-fluid w-100 rounded"></a>
+                            
+                            <hr class="my-4 border-dark opacity-25">
+
+                            <!-- Sección Redes Sociales (Ahora con Imágenes) -->
+                            <div class="text-center mb-4">
+                                <h6 class="fw-bold mb-3" style="letter-spacing: 1px;">¡Síguenos en redes!</h6>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="#" class="sidebar-social-img-link">
+                                        <!-- Asegúrate de tener estas imágenes en tu carpeta -->
+                                        <img src="img/redes_sociales/face.svg" alt="Facebook" class="img-fluid">
+                                    </a>
+                                    <a href="#" class="sidebar-social-img-link">
+                                        <img src="img/redes_sociales/insta.svg" alt="Instagram" class="img-fluid">
+                                    </a>
+                                    <a href="#" class="sidebar-social-img-link">
+                                        <img src="img/redes_sociales/youtube.svg" alt="YouTube" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Banner Inferior (Buscas algo en especial) -->
+                            <a href="#" class="sidebar-img-link mt-4">
+                                <img src="img/anuncio/anuncio-tienda.webp" alt="Buscas algo especial" class="img-fluid w-100 rounded">
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- ==================== LADO DERECHO: PRODUCTOS ==================== -->
+                    <div class="col-lg-10 order-1 order-lg-2">
+                    
+                        <!-- Fila interna para dividir Fotos (Izquierda) y Detalles (Derecha) -->
+                        <div class="row g-4 g-lg-5">
+                            
+                            <!-- Columna de Imágenes -->
+                            <div class="col-md-7">
+                                <!-- Imagen Principal -->
+                                <div class="position-relative mb-3 product-main-container">
+                                    <img src="img/productos/productos-especificaciones/1.jpg" id="main-product-img" alt="Goddess of Victory: Nikke Cinderella" class="img-fluid w-100 border cursor-zoom" data-bs-toggle="modal" data-bs-target="#modalGaleria">
+                                </div>
+
+                                <!-- Miniaturas (Thumbnails) -->
+                                <div class="row g-2">
+                                    <div class="col-3">
+                                        <div class="tint-wrapper">
+                                            <img src="img/productos/productos-especificaciones/1.jpg" alt="Thumb 1" class="img-fluid border thumbnail-img active">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="tint-wrapper">
+                                            <img src="img/productos/productos-especificaciones/2.png" alt="Thumb 2" class="img-fluid border thumbnail-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="tint-wrapper">
+                                            <img src="img/productos/productos-especificaciones/3.png" alt="Thumb 3" class="img-fluid border thumbnail-img">
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="tint-wrapper">
+                                            <img src="img/productos/productos-especificaciones/4.png" alt="Thumb 4" class="img-fluid border thumbnail-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Columna de Información -->
+                            <div class="col-md-5">
+                                <!-- Título y Precio -->
+                                <h2 class="product-title-detail fw-normal mb-2 text-dark">Goddess of Victory: Nikke Cinderella 1/7</h2>
+                                <h3 class="product-price-detail fw-bold mb-4">S/700.00 <span class="fs-6 fw-normal">PEN</span></h3>
+
+                                <!-- Banner de Preventa (Guarda esta franja verde como imagen) -->
+                                <img src="img/beneficios/preventa-product.png" alt="10% de descuento preventa" class="img-fluid w-100 mb-4">
+
+                                <hr class="border-dark mb-4">
+
+                                <!-- Características -->
+                                <h5 class="fw-bold mb-3 text-dark letter-spacing-1">CARACTERÍSTICAS</h5>
+                                <ul class="list-unstyled product-specs text-dark">
+                                    <li><span class="fw-bold">Personaje:</span> Ako Amau</li>
+                                    <li><span class="fw-bold">Serie:</span> Blue Archive</li>
+                                    <li><span class="fw-bold">Fecha de Salida:</span> Diciembre 2026</li>
+                                    <li><span class="fw-bold">Compañía:</span> Good Smile Company</li>
+                                    <li><span class="fw-bold">Línea:</span> Nendoroid</li>
+                                    <li><span class="fw-bold">Especificaciones:</span> Escultura pre-pintada</li>
+                                    <li><span class="fw-bold">Material:</span> PVC & ABS</li>
+                                    <li><span class="fw-bold">Tamaño:</span> 10 cm aprox.</li>
+                                </ul>
+
+                                <!-- Categorías y Tags -->
+                                <div class="product-meta mt-4 text-dark" style="font-size: 0.9rem;">
+                                    <p class="mb-2">
+                                        <span class="fw-bold">Categories</span> 
+                                        <a href="#" class="meta-link">Preventa</a>, 
+                                        <a href="#" class="meta-link">Figuras 2026</a>, 
+                                        <a href="#" class="meta-link">Diciembre 2026</a>, 
+                                        <a href="#" class="meta-link">Articuladas</a>
+                                    </p>
+                                    <p class="mb-0">
+                                        <span class="fw-bold">Tags</span> 
+                                        <a href="#" class="meta-link">Good Smile Company</a>, 
+                                        <a href="#" class="meta-link">Nendoroid</a>, 
+                                        <a href="#" class="meta-link">Blue Archive</a>, 
+                                        <a href="#" class="meta-link">Ako Amau</a>
+                                    </p>
+                                </div>
+
+                                <hr class="border-dark my-4">
+
+                                <!-- Botón de Añadir al carrito -->
+                                <button class="btn btn-add-cart w-100 py-3 fw-bold">Solicitar</button>
+
+                                <!-- ==========================================================
+                                    FORMAS DE PAGO Y ENVÍO (DEBAJO DEL BOTÓN)
+                                =========================================================== -->
+                                <div class="payment-shipping-sidebar mt-4">
+                                    <!-- Línea superior -->
+                                    <hr>
+                                    
+                                    <!-- Título e Imagen de Pagos -->
+                                    <h6 class="title-sidebar">FORMAS DE PAGO</h6>
+                                    <img src="img/pagos.png" alt="Formas de Pago" class="img-fluid img-payment py-3">
+                                    
+                                    <!-- Línea separadora -->
+                                    <hr>
+                                    
+                                    <!-- Título e Imagen de Envíos -->
+                                    <h6 class="title-sidebar">METODOS DE ENVIO</h6>
+                                    <img src="img/envios.png" alt="Métodos de Envío" class="img-fluid img-payment py-3">
+                                    
+                                    <!-- Línea inferior -->
+                                    <hr>
+                                </div>
+                            </div>
+
+                        </div> <!-- Fin Fila Interna -->
+                    </div> <!-- Fin Lado Derecho -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================================================
+                                            FOOTER
+    =========================================================================================-->
+    <footer class="footer-bg py-4 border-top border-dark">
+        <div class="container-fluid px-md-5">
+            
+            <div class="row align-items-center text-center">
+                
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <a href="index.html">
+                        <img src="img/logo2.png" alt="Logo Tienda" class="img-fluid footer-logo">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    
+                    <div class="footer-nav mb-2">
+                        <a href="index.html">Inicio</a> <span class="text-white mx-1">|</span>
+                        <a href="about.html">Acerca de</a> <span class="text-white mx-1">|</span>
+                        <a href="preguntas.html">FAQ</a> <span class="text-white mx-1">|</span>
+                        <a href="locales.html">Tiendas</a> <span class="text-white mx-1">|</span>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                    
+                    <div class="footer-legal">
+                        <p class="text-white mt-1 mb-0 copyright-text">© 2026 Tu Tienda. Todos los derechos reservados.</p>
+                        <p class="text-white mt-1 mb-0 copyright-text">
+                            Hecho con <i class="fa-solid fa-heart mx-1" style="color: #E10080;"></i> por 
+                            <!-- Cambia el link del href por tu URL real -->
+                            <a href="#" target="_blank" class="navito-link">NavitoSc</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="footer-social">
+                        <a href="#" class="footer-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================================================================
+                                        MODAL ZOOM
+    =========================================================================================-->
+    <div class="modal fade" id="modalGaleria" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl" style="max-width: 95vw;"> 
+            
+            <!-- CAMBIO 1: Le añadimos data-bs-dismiss="modal" y un cursor de manito (pointer) -->
+            <div class="modal-content bg-transparent border-0 position-relative" data-bs-dismiss="modal" style="cursor: pointer;">
+                
+                <!-- Botón de cerrar -->
+                <button type="button" class="btn-close-gallery" data-bs-dismiss="modal" aria-label="Cerrar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                    </svg>
+                </button>
+                
+                <!-- Contenedor de la imagen -->
+                <div class="modal-body text-center p-0">
+                    <!-- CAMBIO 2: Añadimos onclick="event.stopPropagation()" para que al tocar la foto NO se cierre, y regresamos el cursor a la normalidad -->
+                    <img src="" id="img-modal-grande" class="img-fluid shadow-lg rounded" style="max-height: 92vh; width: auto; object-fit: contain; cursor: default;" alt="Imagen Ampliada" onclick="event.stopPropagation()">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/iniciador.js"></script>
+    <script src="js/preload.js"></script>
+    <script src="js/product-slider.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="js/zoom.js"></script>
+</body>
+</html>

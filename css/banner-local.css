@@ -1,0 +1,33 @@
+/* ==================== MODIFICADORES PARA EL BANNER "LOCAL" ==================== */
+
+/* 1. Imagen de fondo específica para Local (estilo manga fucsia) */
+.categoria-banner.banner-local {
+    /* IMPORTANTE: Coloca aquí la ruta de tu fondo estilo manga */
+    background-image: url('../img/locales/banner-locales.jpg'); 
+}
+
+/* 2. Tamaños de texto inmensos (Mantenemos la coherencia de la marca) */
+.banner-local h1 {
+    font-size: 4.5rem; 
+    letter-spacing: 1px;
+}
+.banner-local p {
+    font-size: 2rem !important; 
+}
+
+/* ==================== RESPONSIVO PARA LOCAL ==================== */
+@media (max-width: 768px) {
+    /* Dejamos que el banner crezca para acomodar todo */
+    .categoria-banner.banner-local {
+        height: auto; 
+        padding: 40px 15px; 
+    }
+    
+    /* Achicamos los textos para pantallas móviles */
+    .banner-local h1 {
+        font-size: 3rem; 
+    }
+    .banner-local p {
+        font-size: 1.5rem !important;
+    }
+}

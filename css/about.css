@@ -1,0 +1,22 @@
+/* ==================== SECCIÓN DE TEXTOS ABOUT (HISTORIA) ==================== */
+
+/* Línea separadora negra debajo de los títulos */
+.about-divider {
+    border: none;
+    border-top: 2px solid #000000;
+    opacity: 1; /* Forzamos a que sea negro sólido, no grisáceo */
+    margin-bottom: 25px; /* Espacio entre la línea y el primer párrafo */
+}
+
+/* Estilos de los párrafos para facilitar la lectura */
+.about-text-section p {
+    font-size: 1.05rem;
+    line-height: 1.8; /* Da más espacio entre las líneas de texto */
+    color: #333333; /* Un gris casi negro cansa menos la vista que el negro puro */
+    margin-bottom: 1.5rem; /* Separación clara entre cada párrafo */
+}
+
+/* Clase de utilidad para pintar textos de fucsia */
+.text-fucsia {
+    color: #FF0062;
+}

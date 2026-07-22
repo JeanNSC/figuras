@@ -1,0 +1,25 @@
+/* ==================== SECCIÓN BENEFICIOS ==================== */
+
+.beneficio-card {
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    overflow: hidden; /* Necesario para que la imagen no se salga del borde al hacer zoom */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra sutil */
+    transition: box-shadow 0.3s ease;
+}
+
+.beneficio-img {
+    display: block;
+    transition: transform 0.4s ease; /* Transición suave para el hover */
+    object-fit: cover;
+}
+
+/* ==================== EFECTOS HOVER ==================== */
+
+/* Al pasar el mouse, la caja acentúa su sombra y la imagen hace un ligero zoom */
+.beneficio-link:hover .beneficio-card {
+    box-shadow: 0 8px 20px rgba(225, 0, 128, 0.2); /* Sombra fucsia suave usando el color de tu marca */
+}
+
+.beneficio-link:hover .beneficio-img {
+    transform: scale(1.03); /* Un zoom muy sutil hacia adentro */
+}

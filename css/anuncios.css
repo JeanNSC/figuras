@@ -1,0 +1,39 @@
+/* ==================== SECCIÓN ANUNCIOS ==================== */
+
+.banner-anuncio {
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover en las imágenes */
+.swiper-slide:hover .banner-anuncio {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ==================== FLECHAS DEL SLIDER ==================== */
+
+/* Personalización de las flechas nativas de Swiper */
+.custom-arrow {
+    color: #ffffff !important; /* Flechas blancas */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente oscuro */
+    width: 50px !important;
+    height: 80px !important;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hacer las flechas un poco más pequeñas */
+.custom-arrow::after {
+    font-size: 1.5rem !important;
+    font-weight: bold;
+}
+
+/* Al pasar el mouse, las flechas cambian a tu color fucsia */
+.custom-arrow:hover {
+    background-color: #E10080;
+}
+
+/* Posicionar las flechas pegadas a los bordes */
+.swiper-button-prev { left: 0 !important; }
+.swiper-button-next { right: 0 !important; }

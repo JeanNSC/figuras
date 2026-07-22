@@ -1,0 +1,87 @@
+/* ==================== ESTILOS SECCIÓN FABRICANTES ==================== */
+
+/* Líneas laterales del título principal (ajustadas a negro y más delgadas) */
+.line-divider {
+    flex-grow: 1; 
+    height: 1px; 
+    background-color: #000; 
+    max-width: 60px; /* Largo de la línea igual al de tu imagen */
+}
+
+.fabricantes-header h3 {
+    letter-spacing: 1px;
+    font-size: 1.3rem; /* Tamaño de letra calcado de tu diseño */
+}
+
+/* Efecto al pasar el cursor por toda la columna */
+.fabricante-item {
+    padding: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.fabricante-item:hover {
+    transform: translateY(-5px); /* Salto muy sutil */
+}
+
+/* Contenedor del logo limpio, sin cajas ni sombras */
+.fabricante-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px; /* Asegura que todos los logos estén alineados sin encogerlos */
+    margin-bottom: 1rem;
+}
+
+/* Ajustes de la imagen del logo */
+.fabricante-logo img {
+    max-height: 140px; /* Límite amplio para que recuperen su gloria */
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover: la imagen crece un poquito */
+.fabricante-item:hover .fabricante-logo img {
+    transform: scale(1.05);
+}
+
+.fabricante-item h5 {
+    font-size: 1.25rem !important; /* Tamaño fuerte y original del título */
+}
+
+/* Estilo personalizado para el texto descriptivo */
+.text-muted-custom {
+    font-size: 0.95rem !important; /* Ligeramente más grande que tu 0.85 original para recuperar presencia */
+    line-height: 1.5;
+    color: #777777; 
+    margin-top: 5px;
+}
+
+/* ==================== ESTILOS SWIPER FABRICANTES ==================== */
+
+.swiperFabricantes {
+    padding-bottom: 60px !important; /* Aumentamos el espacio inferior para que respiren los textos */
+    --swiper-pagination-color: #FF0062; /* Obliga a Swiper a usar tu fucsia y quita el azul */
+}
+
+/* Forzamos que los puntitos bajen al límite del contenedor */
+.swiperFabricantes .swiper-pagination {
+    bottom: 5px !important; 
+}
+
+/* Personalizamos el tamaño y color de los puntitos inactivos */
+.swiperFabricantes .swiper-pagination-bullet {
+    background-color: #bbbbbb; 
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important; /* Separación entre los puntitos */
+    transition: all 0.3s ease;
+}
+
+/* Animación sutil para el puntito activo */
+.swiperFabricantes .swiper-pagination-bullet-active {
+    background-color: #21E672;
+    transform: scale(1.3);
+}

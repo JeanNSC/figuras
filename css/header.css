@@ -1,0 +1,187 @@
+/* ==================== ESTILOS DE LA BARRA SUPERIOR ==================== */
+
+.top-header {
+    background-color: #181b29; /* Un tono oscuro suave y elegante, no negro puro */
+    border-bottom: none;
+}
+
+.logo-img {
+    max-height: 40px; /* Redujimos la altura de 65px a 40px */
+    width: auto;
+    max-width: 100%; /* Asegura que si el logo es muy ancho, no rompa la estructura de columnas */
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover .logo-img {
+    transform: scale(1.05); 
+}
+
+/* Buscador gris redondeado */
+.search-bar input {
+    background-color: #f1f1f1 !important;
+}
+.search-bar input:focus {
+    box-shadow: none;
+    outline: none;
+    background-color: #e2e2e2 !important;
+}
+.search-bar button {
+    background: transparent;
+}
+.search-bar button:hover i {
+    color: #e60000; /* Efecto al pasar el mouse por la lupa */
+    transition: 0.3s ease;
+}
+
+/* ==================== REDES SOCIALES ==================== */
+
+.social-links {
+    margin-left: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; /* Manteniendo círculos suaves, nada de cajas rígidas */
+    background-color: #f1f1f1;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.social-icon:hover {
+    background-color: #FF0062; /* Rojo vibrante */
+    color: #ffffff !important;
+    transform: translateY(-3px); /* Pequeño salto dinámico */
+    box-shadow: 0 4px 10px rgba(119, 1, 166, 0.4);
+}
+
+/* ==================== BARRA DE NAVEGACIÓN ==================== */
+
+.bg-nav-custom {
+    background-color: #FF0062 !important; /* Fucsia intenso */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-nav-link {
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    /* Transición suave para el color del texto y el fondo */
+    transition: background-color 0.2s ease, color 0.2s ease; 
+    /* Aumentamos el padding lateral para que el bloque verde tenga el mismo ancho que en tu imagen */
+    padding: 8px 18px !important; 
+    border-radius: 0; /* Bordes rectos y definidos */
+}
+
+/* El nuevo efecto Hover estilo bloque verde */
+.custom-nav-link:hover {
+    background-color: #21E672 !important; /* Verde vibrante calcado de tu imagen */
+    color: #000000 !important; /* Texto en negro puro para máximo contraste */
+}
+
+/* ==================== BOTÓN MENÚ HAMBURGUESA (MÓVIL) ==================== */
+
+.navbar-toggler {
+    background-color: transparent !important;
+    border: 0 !important; /* Fuerza a quitar cualquier borde visible */
+    outline: none !important; /* Quita el marco azul/negro de selección */
+    box-shadow: none !important; /* Quita sombras nativas de Bootstrap */
+    padding: 0.25rem 0.5rem;
+}
+
+/* Forzamos el ícono a ser blanco puro inyectando un SVG directamente */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+    filter: none !important; /* Limpiamos cualquier filtro anterior */
+}
+
+/* Efecto al tocar o hacer clic (sin que aparezcan marcos molestos) */
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+    opacity: 0.7;
+}
+
+/* ==================== OFFCANVAS (MENÚ LATERAL MÓVIL) ==================== */
+
+/* 1. MAGIA PARA COMPUTADORAS: 
+   Obligamos al Offcanvas a comportarse como una barra horizontal normal en PC.
+   Esto garantiza que tu modo Desktop quede intacto pase lo que pase. */
+@media (min-width: 992px) {
+    .offcanvas {
+        position: static !important;
+        visibility: visible !important;
+        transform: none !important;
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100% !important; /* ¡LA CLAVE! Cambiamos 'auto' por '100%' para que ocupe toda la barra */
+        height: auto !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .offcanvas-header {
+        display: none !important; /* Ocultamos el título "Menú" y la "X" en computadora */
+    }
+    .offcanvas-body {
+        padding: 0 !important;
+        overflow: visible !important;
+        width: 100% !important; /* Obliga al cuerpo del menú a estirarse para poder centrar los items */
+    }
+
+    /* ¡NUEVO! Ocultamos las redes móviles en PC */
+    .offcanvas-social {
+        display: none !important;
+    }
+}
+
+/* 2. ESTILOS DEL MENÚ LATERAL PARA CELULARES */
+@media (max-width: 991px) {
+    .offcanvas {
+        background-color: #181b29; /* Le damos el fondo oscuro elegante como el header */
+        max-width: 280px; /* Anchura del menú al desplegarse */
+    }
+
+    .custom-nav-link {
+        text-align: left; /* Textos alineados a la izquierda como en tu imagen */
+        /* border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important; Líneas separadoras sutiles */
+        padding: 16px 25px !important;
+        font-size: 1rem;
+        display: block; /* Asegura que abarque todo el ancho */
+    }
+}
+
+/* Ajuste de redes sociales para pantallas muy pequeñas */
+@media (max-width: 768px) {
+    .social-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
+    }
+}
+
+/* ==================== REDES SOCIALES (MENÚ MÓVIL) ==================== */
+
+.mobile-social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #ffffff; /* Fondo blanco circular */
+    color: #FF0062; /* Ícono fucsia brillante */
+    border-radius: 50%; /* Lo convierte en un círculo perfecto */
+    font-size: 1.3rem; /* Tamaño del ícono proporcionado al círculo */
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto interactivo al tocar el ícono */
+.mobile-social-icon:hover, .mobile-social-icon:active {
+    background-color: #FF0062; /* El fondo se vuelve fucsia */
+    color: #ffffff; /* El ícono se vuelve blanco */
+    transform: translateY(-3px); /* Pequeño salto dinámico */
+    box-shadow: 0 4px 10px rgba(255, 0, 98, 0.4); /* Resplandor fucsia */
+}

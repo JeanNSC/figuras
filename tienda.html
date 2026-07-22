@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Store - Tienda</title>
+    <!-- Icono de la pestaña (Favicon) -->
+    <link rel="icon" type="image/png" href="img/logo2.png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preload.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/banner-tienda.css">
+    <link rel="stylesheet" href="css/tienda-cuerpo.css">
+    <link rel="stylesheet" href="css/preventa.css"> <!-- Aquí viven tus tarjetas -->
+    <link rel="stylesheet" href="css/descuento.css"> <!-- Aquí vive tu etiqueta de oferta -->
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body class="no-scroll">
+
+    <!-- ==================== PANTALLA DE CARGA (VIDEO) ==================== -->
+    <div id="preloader">
+        <img src="img/preload.webp" class="custom-logo-loader">
+    </div>
+
+    <!-- ========================================================================================
+                                           HEADER
+     =========================================================================================--> 
+    <header class="sticky-top" style="z-index: 1050;">
+        <div class="top-header py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/logo.png" alt="Logo OtakuBazaar" class="img-fluid logo-img">
+                        </a>
+                    </div>
+
+                    <div class="col-md-4 mb-md-0 d-flex justify-content-center">
+                        <div class="search-bar position-relative w-100" style="max-width: 350px;">
+                            <input type="text" class="form-control rounded-pill border-0 py-2 ps-4 pe-5" placeholder="Texto a buscar...">
+                            <button type="submit" class="btn border-0 position-absolute end-0 top-0 h-100 pe-3 text-muted">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 d-none d-md-flex justify-content-md-end align-items-center">
+                        <div class="social-links d-flex gap-2">
+                            <a href="#" class="social-icon text-dark" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="TikTok">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+                            <a href="#" class="social-icon text-dark" aria-label="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg bg-nav-custom p-0" id="mainNavbar">
+            <div class="container-fluid px-0">
+                
+                <!-- 1. BOTÓN HAMBURGUESA: Cambiamos a data-bs-toggle="offcanvas" -->
+                <button class="navbar-toggler m-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bottomNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 2. MENÚ LATERAL: Cambiamos 'offcanvas-end' por 'offcanvas-start' (Izquierda) -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="bottomNav">
+                    
+                    <!-- Cabecera del menú lateral (Sin título, solo la "X" alineada a la derecha) -->
+                    <div class="offcanvas-header justify-content-end">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                    </div>
+
+                    <!-- Cuerpo del menú -->
+                    <div class="offcanvas-body p-0 p-lg-2 justify-content-center">
+                        <ul class="navbar-nav gap-0 gap-lg-4 text-start text-lg-center w-100 justify-content-center">
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PREVENTA</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">PELUCHES</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MANGAS Y REVISTAS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">TCG</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">MERCH VARIOS</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="tienda.html">FIGURAS +18</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="preguntas.html">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link text-white fw-bold custom-nav-link" href="locales.html">TIENDAS</a></li>
+                        </ul>
+                        <div class="offcanvas-social d-flex justify-content-center gap-3 py-4 mt-auto">
+                            <a href="#" class="mobile-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#" class="mobile-social-icon" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========================================================================================
+                                    BANNER DE CATEGORÍA (PREVENTA)
+        =========================================================================================--> 
+        <section class="categoria-banner" data-aos="fade-in" data-aos-duration="1000">
+            <div class="banner-content text-center">
+                <!-- Título centrado con efecto de borde negro -->
+                <h1 class="banner-title text-white text-uppercase fw-bold mb-0">FIGURAS EN PREVENTA</h1>
+            </div>
+        </section>
+
+        <!-- ========================================================================================
+                                    CUERPO DE LA TIENDA (PRODUCTOS Y SIDEBAR)
+        =========================================================================================--> 
+        <section class="py-5 bg-white" id="catalogo-tienda">
+            <div class="container-fluid px-md-5">
+
+                <!-- Cabecera de resultados y filtros -->
+                <div class="row mb-4" data-aos="fade-up">
+                    <div class="col-12 d-flex flex-column flex-md-row justify-content-between align-items-center border-bottom pb-3">
+                        <p class="text-muted mb-3 mb-md-0 fw-bold" style="font-size: 0.85rem; letter-spacing: 0.5px;">
+                            MOSTRANDO 1–16 DE 45 RESULTADOS
+                        </p>
+                        <select class="form-select w-auto shadow-sm" aria-label="Ordenar resultados">
+                            <option selected>Ordenar por las últimas</option>
+                            <option value="1">Ordenar por precio: bajo a alto</option>
+                            <option value="2">Ordenar por precio: alto a bajo</option>
+                            <option value="3">Ordenar por popularidad</option>
+                        </select>
+                    </div>
+                </div>
+
+               <div class="row g-4">
+                    
+                    <!-- ==================== LADO IZQUIERDO: SIDEBAR / REDES ==================== -->
+                    <!-- Cambiamos a order-lg-1 para que en computadora salga a la izquierda -->
+                    <div class="col-lg-2 order-2 order-lg-1 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="sidebar-tienda sticky-lg-top" style="top: 100px;">
+                            
+                            <!-- Banners Pequeños Apilados -->
+                            <a href="preguntas.html" class="sidebar-img-link mb-3"><img src="img/beneficios/4.jpg" alt="Compra segura" class="img-fluid w-100 rounded"></a>
+                            <a href="preguntas.html" class="sidebar-img-link mb-3"><img src="img/beneficios/5.jpg" alt="Envios" class="img-fluid w-100 rounded"></a>
+                            <a href="preguntas.html" class="sidebar-img-link mb-3"><img src="img/beneficios/6.jpg" alt="Preventas" class="img-fluid w-100 rounded"></a>
+                            
+                            <hr class="my-4 border-dark opacity-25">
+
+                            <!-- Sección Redes Sociales (Ahora con Imágenes) -->
+                            <div class="text-center mb-4">
+                                <h6 class="fw-bold mb-3" style="letter-spacing: 1px;">¡Síguenos en redes!</h6>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="#" class="sidebar-social-img-link">
+                                        <!-- Asegúrate de tener estas imágenes en tu carpeta -->
+                                        <img src="img/redes_sociales/face.svg" alt="Facebook" class="img-fluid">
+                                    </a>
+                                    <a href="#" class="sidebar-social-img-link">
+                                        <img src="img/redes_sociales/insta.svg" alt="Instagram" class="img-fluid">
+                                    </a>
+                                    <a href="#" class="sidebar-social-img-link">
+                                        <img src="img/redes_sociales/youtube.svg" alt="YouTube" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Banner Inferior (Buscas algo en especial) -->
+                            <a href="#" class="sidebar-img-link mt-4">
+                                <img src="img/anuncio/anuncio-tienda.webp" alt="Buscas algo especial" class="img-fluid w-100 rounded">
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <!-- ==================== LADO DERECHO: PRODUCTOS ==================== -->
+                    <div class="col-lg-10 order-1 order-lg-2">
+                        <div class="row g-4">
+                            
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 2 (CON ETIQUETA DE OFERTA) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <!-- Etiqueta de Oferta (z-3 asegura que se vea por encima de la imagen al hacer hover) -->
+                                            <span class="discount-badge position-absolute top-0 end-0 mt-2 me-2 z-3">¡Oferta!</span>
+                                            <img src="img/productos/1.jpg" alt="Producto Oferta" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto Oferta Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Haru Urara Peluche Gigante (SK Japan)</h6>
+                                        <!-- Contenedor de precio con descuento -->
+                                        <div class="price-container-sale">
+                                            <span class="price-old">S/209.00</span>
+                                            <div>
+                                                <span class="price-new">S/189.00</span> <span class="price-currency">PEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 3 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 3" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 3 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Maria Mikhailovna Kujou Chocopuni Plushie</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 4 (CON ETIQUETA DE OFERTA) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <!-- Etiqueta de Oferta (z-3 asegura que se vea por encima de la imagen al hacer hover) -->
+                                            <span class="discount-badge position-absolute top-0 end-0 mt-2 me-2 z-3">¡Oferta!</span>
+                                            <img src="img/productos/1.jpg" alt="Producto Oferta" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto Oferta Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Haru Urara Peluche Gigante (SK Japan)</h6>
+                                        <!-- Contenedor de precio con descuento -->
+                                        <div class="price-container-sale">
+                                            <span class="price-old">S/209.00</span>
+                                            <div>
+                                                <span class="price-new">S/189.00</span> <span class="price-currency">PEN</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Producto 1 (Normal, sin etiqueta) -->
+                            <div class="col-12 col-md-4 col-lg-3 producto-item">
+                                <a href="producto.html" class="text-decoration-none text-dark product-card-link">
+                                    <div class="product-card">
+                                        <div class="product-img-container mb-3 position-relative">
+                                            <img src="img/productos/1.jpg" alt="Producto 1" class="img-fluid w-100 img-main">
+                                            <img src="img/productos/2.webp" alt="Producto 1 Reverso" class="img-fluid w-100 img-hover">
+                                        </div>
+                                        <h6 class="product-title mb-2">Special Week Peluche Gift [Uma Musume]</h6>
+                                        <div class="product-price">
+                                            <span class="price-number">S/289.00</span> <span class="price-currency">PEN</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- Paginación estilo DarkoStore -->
+                        <div class="row mt-5 mb-4">
+                            <div class="col-12">
+                                <ul class="custom-pagination d-flex align-items-center mb-2">
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><span class="dots">...</span></li>
+                                    <li><a href="#">44</a></li>
+                                    <li><a href="#">45</a></li>
+                                    <li><a href="#">46</a></li>
+                                    <li><a href="#" class="next-arrow">&rarr;</a></li>
+                                </ul>
+                                <!-- La línea negra inferior -->
+                                <hr class="pagination-line">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+              
+    </main>
+
+    <!-- ========================================================================================
+                                            FOOTER
+    =========================================================================================-->
+    <footer class="footer-bg py-4 border-top border-dark">
+        <div class="container-fluid px-md-5">
+            
+            <div class="row align-items-center text-center">
+                
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <a href="index.html">
+                        <img src="img/logo2.png" alt="Logo Tienda" class="img-fluid footer-logo">
+                    </a>
+                </div>
+
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    
+                    <div class="footer-nav mb-2">
+                        <a href="index.html">Inicio</a> <span class="text-white mx-1">|</span>
+                        <a href="about.html">Acerca de</a> <span class="text-white mx-1">|</span>
+                        <a href="preguntas.html">FAQ</a> <span class="text-white mx-1">|</span>
+                        <a href="locales.html">Tiendas</a> <span class="text-white mx-1">|</span>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                    
+                    <div class="footer-legal">
+                        <p class="text-white mt-1 mb-0 copyright-text">© 2026 Tu Tienda. Todos los derechos reservados.</p>
+                        <p class="text-white mt-1 mb-0 copyright-text">
+                            Hecho con <i class="fa-solid fa-heart mx-1" style="color: #E10080;"></i> por 
+                            <!-- Cambia el link del href por tu URL real -->
+                            <a href="#" target="_blank" class="navito-link">NavitoSc</a>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="footer-social">
+                        <a href="#" class="footer-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="footer-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/iniciador.js"></script>
+    <script src="js/preload.js"></script>
+    <script src="js/paginacion.js"></script>
+</body>
+</html>

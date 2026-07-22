@@ -1,0 +1,20 @@
+/* Variables para colores vibrantes y fondos */
+:root {
+    --bg-dark: #0f111a;
+    --bg-card: #181b29;
+    --neon-color: #00ffcc;
+    --neon-hover: #00ccaa;
+}
+
+body {
+    /*background-color: var(--bg-dark);*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ==================== PROTECCIÓN CONTRA ANIMACIONES AOS ==================== */
+/* Oculta los elementos que esperan fuera de la pantalla sin romper el sticky header */
+main, footer {
+    overflow-x: hidden;
+    width: 100%;
+}

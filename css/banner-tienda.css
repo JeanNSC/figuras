@@ -1,0 +1,61 @@
+/* ==================== BANNER DE CATEGORÍAS (TIENDA) ==================== */
+
+.categoria-banner {
+    width: 100%;
+    height: 320px; /* Altura ideal para PC */
+    /* Asegúrate de poner la ruta correcta a tu imagen de fondo */
+    background-image: url('../img/productos/banner/banner_preventa.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Opcional: Un ligerísimo tinte oscuro sobre la imagen para asegurar lectura 
+   (Puedes borrar este bloque si tu imagen ya es oscura o no lo necesitas) */
+.categoria-banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.2); 
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2; /* Obliga al texto a estar sobre la imagen y el tinte */
+    padding: 0 20px;
+}
+
+/* El truco del borde negro: Combinamos sombras en las 4 esquinas + una sombra difuminada */
+.banner-title {
+    font-size: 5rem;
+    letter-spacing: 1px;
+    text-shadow:
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         4px  4px 10px rgba(0, 0, 0, 0.8);
+}
+
+/* ==================== RESPONSIVO (CELULARES Y TABLETS) ==================== */
+@media (max-width: 768px) {
+    .categoria-banner {
+        height: 160px; /* Hacemos el banner menos alto en celulares */
+    }
+    
+    .banner-title {
+        font-size: 3rem;
+        /* En celulares achicamos un poco el grosor del borde negro para que no se vea tosco */
+        text-shadow:
+            -1.5px -1.5px 0 #000,  
+             1.5px -1.5px 0 #000,
+            -1.5px  1.5px 0 #000,
+             1.5px  1.5px 0 #000,
+             3px  3px 6px rgba(0, 0, 0, 0.8);
+    }
+}
